@@ -1,0 +1,13 @@
+spring:
+  liquibase:
+        url: ${spring.datasource.url}
+        password: ${spring.datasource.password}
+        user: ${spring.datasource.username}
+        change-log: classpath:/db/changelog/master.xml
+        enabled: true
+  datasource:
+        username: postgres
+        password: postgres
+        url: jdbc:postgresql://localhost:5432/blog
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect

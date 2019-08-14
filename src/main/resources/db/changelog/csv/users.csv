@@ -1,0 +1,4 @@
+id;username;password;first_name;last_name;email;created
+1;master;master;John;Brian;master@example.com;2001-09-28 00:00:00
+2;user1;user1;Tom;Cat;user1@example.com;2001-09-28 00:00:01
+3;user2;user2;Mike;Boss;user2@example.com;2001-09-28 09:00:00

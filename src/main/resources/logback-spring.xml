@@ -1,0 +1,38 @@
+<configuration>
+
+    <appender name="FILE-ROLLING" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+                <fileNamePattern>${user.home}/logs/app_%d{MM-yyyy}_%i.log</fileNamePattern>
+                <maxFileSize>10MB</maxFileSize>
+                <totalSizeCap>100MB</totalSizeCap>
+                <maxHistory>60</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d %p %c{1.} [%t] %m%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="Esempla" level="info" additivity="false">
+        <appender-ref ref="FILE-ROLLING"/>
+    </logger>
+
+
+    <appender name="out" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+
+
+    <root level="Error">
+        <appender-ref ref="out"/>
+        <appender-ref ref="FILE-ROLLING"/>
+    </root>
+
+    <logger name="ch.qos.logback" level="OFF"/>
+    <logger name="org.springframework" level="INFO"/>
+    <logger name="liquibase" level="TRACE"/>
+    <logger name="com.esempla.blog" level="DEBUG"/>
+
+</configuration>

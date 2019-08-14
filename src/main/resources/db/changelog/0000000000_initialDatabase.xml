@@ -1,0 +1,194 @@
+
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+
+
+
+<changeSet author="EsemplaWorker" id="uniqueOne">
+
+  <!--Create users table -->
+
+  <createTable tableName="users">
+
+    <column name="id" type="int" autoIncrement="true">
+      <constraints primaryKey="true" nullable="false"/>
+    </column>
+
+    <column name="username" type="varchar(255)">
+            <constraints nullable="false" unique="true"/>
+    </column>
+
+    <column name="password" type="varchar(255)">
+            <constraints nullable="false" unique="true"/>
+    </column>
+
+    <column name="first_name" type="char(50)">
+            <constraints nullable="false"/>
+    </column>
+
+    <column name="last_name" type="char(50)">
+            <constraints nullable="false"/>
+    </column>
+
+    <column name="email" type="varchar(255)">
+            <constraints nullable="false"/>
+    </column>
+
+    <column name="created" type="datetime">
+            <constraints nullable="false"/>
+    </column>
+
+  </createTable>
+
+  <!-- Create blog table-->
+
+  <createTable tableName="blog">
+
+    <column name="id" type="int" autoIncrement="true">
+      <constraints primaryKey="true"  nullable="false"/>
+    </column>
+
+    <column name="name" type="varchar(255)">
+      <constraints nullable="false"/>
+    </column>
+
+    <column name="user_id" type="int">
+      <constraints nullable="false"/>
+    </column>
+
+
+
+  </createTable>
+    <addForeignKeyConstraint baseColumnNames="user_id"
+                             baseTableName="blog"
+                             constraintName="fk_user_to_blog_id"
+                             referencedColumnNames="id"
+                             referencedTableName="users"/>
+
+    <!--Create roles table-->
+    
+    <createTable tableName="roles">
+
+        <column name="name" type="varchar(255)">
+            <constraints primaryKey="true" nullable="false"/>
+    </column>
+    </createTable>
+
+    <!-- Create user_roles table-->
+
+    <createTable tableName="user_roles">
+
+        <column name="user_id" type="int">
+            <constraints nullable="false"/>
+        </column>
+
+        <column name="role_name" type="varchar(255)">
+            <constraints nullable="false"/>
+        </column>
+
+    </createTable>
+
+    <!-- Add constraints on tables -->
+    <addForeignKeyConstraint baseColumnNames="user_id"
+                             baseTableName="user_roles"
+                             constraintName="fk_users_to_roles_id"
+                             referencedColumnNames="id"
+                             referencedTableName="users"/>
+
+    <addForeignKeyConstraint baseColumnNames="role_name"
+                             baseTableName="user_roles"
+                             constraintName="fk_role_name"
+                             referencedColumnNames="name"
+                             referencedTableName="roles"/>
+
+    <!-- Create comments table -->
+    
+    <createTable tableName="comments">
+        
+        <column name="id" type="int" autoIncrement="true">
+            <constraints primaryKey="true" nullable="false"/>
+        </column>
+        
+        <column name="text" type="varchar(255)">
+            <constraints nullable="true"/>
+        </column>
+
+        <column name="post_id" type="int">
+            <constraints nullable="false"/>
+        </column>
+
+        <column name="created" type="datetime">
+            <constraints nullable="false"/>
+        </column>
+
+    </createTable>
+
+    <!-- Create post table -->
+    
+    <createTable tableName="post">
+        
+        <column name="id" type="int" autoIncrement="true">
+            <constraints primaryKey="true" nullable="false"/>
+        </column>
+        
+        <column name="name" type="varchar(255)">
+            |<constraints nullable="false" unique="true"/>
+        </column>
+
+        <column name="content" type="varchar(255)">
+            <constraints nullable="false"/>
+        </column>
+        
+        <column name="blog_id" type="int">
+            <constraints nullable="false"/>
+        </column>
+
+        <column name="category_id" type="int">
+            <constraints nullable="false"/>
+        </column>
+
+    </createTable>
+
+    <!-- Add foreign key constraints -->
+
+    <addForeignKeyConstraint baseColumnNames="blog_id"
+                             baseTableName="post"
+                             constraintName="fk_blog_id"
+                             referencedColumnNames="id"
+                             referencedTableName="blog"/>
+
+    <!-- Create category table -->
+    
+    <createTable tableName="category">
+
+        <column name="id" type="int" autoIncrement="true">
+            <constraints primaryKey="true" nullable="false"/>
+        </column>
+
+        <column name="name" type="varchar(255)">
+            <constraints nullable="false"/>
+        </column>
+    </createTable>
+
+    <addForeignKeyConstraint baseColumnNames="post_id"
+                             baseTableName="comments"
+                             constraintName="fk_post_id"
+                             referencedColumnNames="id"
+                             referencedTableName="post"/>
+
+
+    <addForeignKeyConstraint baseColumnNames="category_id"
+                             baseTableName="post"
+                             constraintName="fk_category_id"
+                             referencedColumnNames="id"
+                             referencedTableName="category"/>
+
+</changeSet>
+</databaseChangeLog>
+

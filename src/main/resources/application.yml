@@ -16,3 +16,6 @@ spring:
     suffix: .html
     servlet:
       content-type: text/html
+  resources:
+    chain:
+      cache: false

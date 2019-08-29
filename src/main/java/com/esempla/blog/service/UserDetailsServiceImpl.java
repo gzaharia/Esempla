@@ -1,7 +1,7 @@
 package com.esempla.blog.service;
 
 import com.esempla.blog.PrincipalUser;
-import com.esempla.blog.domain.User;
+import com.esempla.blog.domain.Users;
 import com.esempla.blog.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +20,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
-        User user = userRepository.findByUsername(username);
+        Users user = userRepository.findByUsername(username);
 
         if(user == null){
             throw new UsernameNotFoundException(username);

@@ -1,6 +1,8 @@
 package com.esempla.blog.domain;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -9,12 +11,15 @@ import java.util.Set;
 
 @Data
 @Entity
-
-
-public class User {
+@NoArgsConstructor
+@AllArgsConstructor
+public class Users {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @OneToMany(mappedBy = "userId")
+    Set<Blog> blogs;
 
     @Column(name = "username")
     private String username;
@@ -36,7 +41,7 @@ public class User {
 
     @ManyToMany
     @JoinTable(
-            name = "users_roles",
+            name = "user_roles",
             joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name ="role_name")
     )

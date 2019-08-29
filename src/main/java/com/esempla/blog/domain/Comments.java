@@ -1,24 +1,28 @@
 package com.esempla.blog.domain;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.Set;
 
-@Builder
 @Data
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-public class Category {
+public class Comments {
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private String name;
 
-    @OneToMany(mappedBy = "categoryId")
-    Set<Post> posts;
+    @Lob
+    @Column(name = "text")
+    private String text;
+
+    @ManyToOne
+    @JoinColumn(name = "post_id",nullable = false)
+    private Post postId;
+
+
+
 }

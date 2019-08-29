@@ -26,3 +26,21 @@ databaseChangeLog:
             file: db/changelog/csv/category.csv
             separator: ;
             tableName: category
+        - loadData:
+            encoding: UTF-8
+            file: db/changelog/csv/posts.csv
+            separator: ;
+            tableName: post
+
+        - loadData:
+            encoding: UTF-8
+            file: db/changelog/csv/blogs.csv
+            separator: ;
+            tableName: blog
+
+        - loadData:
+            encoding: UTF-8
+            file: db/changelog/csv/comments.csv
+            separator: ;
+            tableName: comments
+

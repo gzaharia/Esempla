@@ -1,6 +1,6 @@
 package com.esempla.blog;
 
-import com.esempla.blog.domain.User;
+import com.esempla.blog.domain.Users;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -10,9 +10,9 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class PrincipalUser implements UserDetails{
-    private User user;
+    private Users user;
 
-    public PrincipalUser(User user) {
+    public PrincipalUser(Users user) {
         this.user = user;
     }
 

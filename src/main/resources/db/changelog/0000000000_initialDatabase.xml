@@ -62,6 +62,11 @@
       <constraints nullable="false"/>
     </column>
 
+      <column name="created" type="datetime">
+          <constraints nullable="false"/>
+      </column>
+
+
 
 
   </createTable>

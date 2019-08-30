@@ -63,7 +63,7 @@
     </column>
 
       <column name="created" type="datetime">
-          <constraints nullable="false"/>
+          <constraints nullable="true"/>
       </column>
 
 
@@ -112,6 +112,64 @@
                              referencedColumnNames="name"
                              referencedTableName="roles"/>
 
+    <!-- Create category table -->
+
+    <createTable tableName="category">
+
+        <column name="id" type="int" autoIncrement="true">
+            <constraints primaryKey="true" nullable="false"/>
+        </column>
+
+        <column name="name" type="varchar(255)">
+            <constraints nullable="false"/>
+        </column>
+    </createTable>
+
+    <!-- Create post table -->
+
+    <createTable tableName="post">
+
+        <column name="id" type="int" autoIncrement="true">
+            <constraints primaryKey="true" nullable="false"/>
+        </column>
+
+        <column name="name" type="varchar(255)">
+            |<constraints nullable="false" unique="true"/>
+        </column>
+
+        <column name="created" type="datetime">
+            <constraints nullable="true"/>
+        </column>
+
+        <column name="content" type="varchar(255)">
+            <constraints nullable="false"/>
+        </column>
+
+        <column name="blog_id" type="int">
+            <constraints nullable="false"/>
+        </column>
+
+        <column name="category_id" type="int">
+            <constraints nullable="false"/>
+        </column>
+
+
+    </createTable>
+
+    <!-- Add foreign key constraints -->
+
+    <addForeignKeyConstraint baseColumnNames="blog_id"
+                             baseTableName="post"
+                             constraintName="fk_blog_id"
+                             referencedColumnNames="id"
+                             referencedTableName="blog"/>
+
+    <addForeignKeyConstraint baseColumnNames="category_id"
+                             baseTableName="post"
+                             constraintName="fk_category_id"
+                             referencedColumnNames="id"
+                             referencedTableName="category"/>
+
     <!-- Create comments table -->
     
     <createTable tableName="comments">
@@ -134,53 +192,6 @@
 
     </createTable>
 
-    <!-- Create post table -->
-    
-    <createTable tableName="post">
-        
-        <column name="id" type="int" autoIncrement="true">
-            <constraints primaryKey="true" nullable="false"/>
-        </column>
-        
-        <column name="name" type="varchar(255)">
-            |<constraints nullable="false" unique="true"/>
-        </column>
-
-        <column name="content" type="varchar(255)">
-            <constraints nullable="false"/>
-        </column>
-        
-        <column name="blog_id" type="int">
-            <constraints nullable="false"/>
-        </column>
-
-        <column name="category_id" type="int">
-            <constraints nullable="false"/>
-        </column>
-
-    </createTable>
-
-    <!-- Add foreign key constraints -->
-
-    <addForeignKeyConstraint baseColumnNames="blog_id"
-                             baseTableName="post"
-                             constraintName="fk_blog_id"
-                             referencedColumnNames="id"
-                             referencedTableName="blog"/>
-
-    <!-- Create category table -->
-    
-    <createTable tableName="category">
-
-        <column name="id" type="int" autoIncrement="true">
-            <constraints primaryKey="true" nullable="false"/>
-        </column>
-
-        <column name="name" type="varchar(255)">
-            <constraints nullable="false"/>
-        </column>
-    </createTable>
-
     <addForeignKeyConstraint baseColumnNames="post_id"
                              baseTableName="comments"
                              constraintName="fk_post_id"
@@ -188,11 +199,10 @@
                              referencedTableName="post"/>
 
 
-    <addForeignKeyConstraint baseColumnNames="category_id"
-                             baseTableName="post"
-                             constraintName="fk_category_id"
-                             referencedColumnNames="id"
-                             referencedTableName="category"/>
+
+
+
+
 
 </changeSet>
 </databaseChangeLog>

@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Data
 @Entity
@@ -19,9 +20,12 @@ public class Comments {
     @Column(name = "text")
     private String text;
 
-    @ManyToOne
-    @JoinColumn(name = "post_id",nullable = false)
-    private Post postId;
+    @Column(name = "created")
+    private Date created_date;
+
+//    @ManyToOne
+//    @JoinColumn(name = "post_id",nullable = false)
+//    private Post postId;
 
 
 

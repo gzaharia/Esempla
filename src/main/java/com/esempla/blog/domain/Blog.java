@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.Set;
 
 @Data
@@ -20,15 +21,19 @@ public class Blog {
     @Column(name = "name")
     private String name;
 
-    @ManyToOne
-    @JoinColumn(name = "user_id",nullable=false)
-    private Users userId;
+//    @ManyToOne
+//    @JoinColumn(name = "user_id",referencedColumnName = "id")
+//    private Users userId;
+
+    @Column(name = "user_id")
+    private Integer user_id;
 
     @Column(name = "created")
     private Date created_date;
 
-    @OneToMany(mappedBy = "blogId")
-    Set<Post> posts;
+    @OneToMany(cascade = CascadeType.ALL,
+            orphanRemoval = true)
+    Set<Post> posts = new HashSet<>();
 
 
 }

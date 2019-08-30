@@ -6,15 +6,14 @@ databaseChangeLog:
       changes:
         - loadData:
             encoding: UTF-8
-            file: db/changelog/csv/posts.csv
-            separator: ;
-            tableName: post
-        - loadData:
-            encoding: UTF-8
             file: db/changelog/csv/blogs.csv
             separator: ;
             tableName: blog
-
+        - loadData:
+            encoding: UTF-8
+            file: db/changelog/csv/posts.csv
+            separator: ;
+            tableName: post
         - loadData:
             encoding: UTF-8
             file: db/changelog/csv/comments.csv

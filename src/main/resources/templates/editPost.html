@@ -1,5 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>index</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
 <body>
 <div class="container" align="center">
 <h1>Edit</h1>
@@ -26,7 +36,8 @@
 
     </table>
 
-    <a href="../editPost.html" class="btn btn-outline-danger" role="button">Save</a>
-    <button type="button">Cancel</button>
+    <a th:href="@{/index}" class="btn btn-outline-primary" role="button">Save</a>
+    <a th:href="@{/index}" class="btn btn-outline-danger" role="button">Cancel</a>
 </div>
 </body>
+</html>

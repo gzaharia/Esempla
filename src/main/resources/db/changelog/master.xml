@@ -6,6 +6,6 @@
     http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 
     <include file="/db/changelog/0000000000_initialDatabase.xml"/>
-    <include file="db/changelog/201914081519_insert_data.yml" relativeToChangelogFile="false"/>
-<!--    <include file="db/changelog/201929081613_insert_rest_data.yml" relativeToChangelogFile="false"/>-->
+    <include file="/db/changelog/201914081519_insert_data.yml" relativeToChangelogFile="false"/>
+    <include file="/db/changelog/201929081613_insert_rest_data.yml" relativeToChangelogFile="false"/>
 </databaseChangeLog>

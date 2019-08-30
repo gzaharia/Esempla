@@ -18,8 +18,9 @@ public class Users {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToMany(mappedBy = "userId")
-    Set<Blog> blogs;
+    @OneToMany(cascade = CascadeType.ALL,
+            orphanRemoval = true)
+    Set<Blog> blogs = new HashSet<>();
 
     @Column(name = "username")
     private String username;

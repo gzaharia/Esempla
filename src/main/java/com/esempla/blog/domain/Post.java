@@ -28,15 +28,16 @@ public class Post {
     @Column(name = "content")
     private String content;
 
-    @ManyToOne
-    @JoinColumn(name = "blog_id",nullable = false)
-    private Blog blogId;
+//    @ManyToOne
+//    @JoinColumn(name = "blog_id",nullable = false)
+//    private Blog blogId;
 
-    @ManyToOne
-    @JoinColumn(name = "category_id",nullable = false)
-    private Category categoryId;
+//    @ManyToOne
+//    @JoinColumn(name = "category_id",nullable = false)
+//    private Category categoryId;
 
-    @OneToMany(mappedBy = "postId")
+    @OneToMany(cascade = CascadeType.ALL,
+            orphanRemoval = true)
     Set<Comments> comments;
 
 

@@ -5,11 +5,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/editPost")
+@RequestMapping(value = "/editPost")
 public class EditController {
-
-    @GetMapping
-    public String getEditPostPage(){
+    @GetMapping()
+    public String getEditPostPage() {
         return "editPost";
     }
 }

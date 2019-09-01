@@ -2,6 +2,7 @@ package com.esempla.blog.config;
 
 import com.esempla.blog.service.UserDetailsServiceImpl;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
@@ -12,28 +13,49 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
+import javax.sql.DataSource;
+
 @RequiredArgsConstructor
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-    private final UserDetailsServiceImpl userDetailsService;
+    //private final UserDetailsServiceImpl userDetailsService;
 
-    @Override
-    protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests()
-                .antMatchers("login","logout","/","index").permitAll()
-                .and()
-                .authorizeRequests()
-                .antMatchers("/edit/*").hasAnyRole("ADMIN","OPERATOR")
-                .and()
-                .formLogin()
-                .and()
-                .logout().logoutSuccessUrl("/");
-    }
+    @Autowired
+    private DataSource dataSource;
+
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.authenticationProvider(authentificationProvider());
+        //auth.authenticationProvider(authentificationProvider());
+
+        auth.jdbcAuthentication().dataSource(dataSource).passwordEncoder(new BCryptPasswordEncoder())
+                .usersByUsernameQuery("select username , password , enabled from users where username=?")
+                .authoritiesByUsernameQuery("select u.username, r.\"name\" from users u \n" +
+                        "\tinner join user_roles ur on u.id = ur.user_id \n" +
+                        "\tinner join roles r on ur.role_name = r.\"name\"\n" +
+                        "\twhere u.username = ?");
+
+    }
+
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+
+        http
+                .authorizeRequests()
+                .antMatchers("/index/**").hasRole("ADMIN")
+                .antMatchers("/**")
+                .permitAll()
+                .and().formLogin()
+                .loginPage("/login")
+                .loginProcessingUrl("/login")
+                .defaultSuccessUrl("/index")
+                .permitAll()
+                .and().logout()
+                .logoutUrl("/logoutPage")
+                .logoutSuccessUrl("/loginPage?logout")
+                .permitAll()
+                .and().httpBasic();
     }
 
     @Override
@@ -55,11 +77,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     }
 
-    @Bean
-    public DaoAuthenticationProvider authentificationProvider(){
-        DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
-        authProvider.setUserDetailsService(userDetailsService);
-        authProvider.setPasswordEncoder( new BCryptPasswordEncoder());
-        return authProvider;
-    }
+//    @Bean
+//    public DaoAuthenticationProvider authentificationProvider(){
+//        DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
+//        authProvider.setUserDetailsService(userDetailsService);
+//        authProvider.setPasswordEncoder( new BCryptPasswordEncoder());
+//        return authProvider;
+//    }
 }

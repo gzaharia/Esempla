@@ -28,6 +28,8 @@ public class Users {
     @Column(name = "password")
     private String password;
 
+    private Boolean enabled;
+
     @Column(name = "first_name")
     private String firstName;
 

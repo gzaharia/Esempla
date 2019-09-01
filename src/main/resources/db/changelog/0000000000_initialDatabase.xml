@@ -24,6 +24,9 @@
             <constraints nullable="false" unique="true"/>
     </column>
 
+      <column name="enabled" type="boolean" defaultValueBoolean="true">
+      </column>
+
     <column name="password" type="varchar(255)">
             <constraints nullable="false" unique="true"/>
     </column>

@@ -15,8 +15,7 @@ import java.util.Set;
 @AllArgsConstructor
 public class Users {
     @Id
-    @SequenceGenerator(name = "hibernate_sequence", sequenceName = "hibernate_sequence", initialValue = 1000, allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "hibernate_sequence")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @OneToMany(cascade = CascadeType.ALL,

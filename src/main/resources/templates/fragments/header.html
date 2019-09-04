@@ -11,11 +11,10 @@
     </div>
     <div class="col-md-4 text-center">
     <nav class="my-2 my-md-0">
-        <a class="p-2 text-dark" href="#">IT</a>
-        <a class="p-2 text-dark" href="#">Art</a>
-        <a class="p-2 text-dark" href="#">Policy</a>
-        <a class="p-2 text-dark" href="#">Social</a>
-        <a class="p-2 text-dark" href="#">
+        <a  th:href="@{/index/message?categoryId=1}"  th:text="Art" class="nav-link">Art</a>
+        <a  th:href="@{/index/message?categoryId=2}"  th:text="Policy" class="nav-link">Policy</a>
+        <a  th:href="@{/index/message?categoryId=3}"  th:text="IT" class="nav-link">IT</a>
+        <a  th:href="@{/index}"  th:text="Home" class="nav-link">Home</a>
             <a th:href="@{/logoutPage}" class="nav-link">Log Out</a>
         </a>
     </nav>

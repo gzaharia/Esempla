@@ -1,9 +1,8 @@
 package com.esempla.blog.controller;
 
+import com.esempla.blog.domain.AppUser;
 import com.esempla.blog.domain.Roles;
 import com.esempla.blog.domain.RolesType;
-import com.esempla.blog.domain.Users;
-import com.esempla.blog.repository.CategoryRepository;
 import com.esempla.blog.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -54,7 +53,7 @@ public class LoginCard {
     public String registerPage(Model model, Principal principal) {
 
 
-        model.addAttribute("newUser",new Users());
+        model.addAttribute("newUser",new AppUser());
 
         return "registerPage";
     }
@@ -62,7 +61,7 @@ public class LoginCard {
 
 
     @PostMapping("/registerNewUser")
-    public String registerNewUser(@ModelAttribute Users newUser, Model model, Principal principal) {
+    public String registerNewUser(@ModelAttribute AppUser newUser, Model model, Principal principal) {
 
 
         BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();

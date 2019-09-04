@@ -18,6 +18,6 @@ public class Roles {
 
 
     @ManyToMany(mappedBy = "usersRoles")
-    Set<Users> users;
+    Set<AppUser> users;
 
 }

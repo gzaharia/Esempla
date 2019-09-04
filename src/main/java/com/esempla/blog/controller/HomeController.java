@@ -4,6 +4,7 @@ import com.esempla.blog.domain.Post;
 import com.esempla.blog.repository.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -19,22 +20,24 @@ public class HomeController {
     private PostRepository postRepository;
 
     @GetMapping
-    public String getHome(){
+    public String getHome(Model model){
+        model.addAttribute("blogs",postRepository.findAll());
         return "index";
     }
 
 
     @GetMapping("/message")
-    @ResponseBody
-    public List<Post> getMessage(@RequestParam("categoryId") Long categoryId){
-     return postRepository.findAllByCategoryId(categoryId);
+    public String getMessage(@RequestParam("categoryId") Long categoryId, Model model){
+
+        model.addAttribute("blogs",postRepository.findAllByCategoryId(categoryId));
+     return "showPostsByCategory";
 
     }
 
     @GetMapping("/message2")
     @ResponseBody
-    public String getMessage2(){
-        return "Hi there2!";
+    public List<Post> getMessage2(@RequestParam("userId") Long userId){
+        return postRepository.findAllByBlogAppUserId(userId);
     }
 
 }

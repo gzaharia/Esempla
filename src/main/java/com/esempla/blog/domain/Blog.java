@@ -21,12 +21,12 @@ public class Blog {
     @Column(name = "name")
     private String name;
 
-//    @ManyToOne
-//    @JoinColumn(name = "user_id",referencedColumnName = "id")
-//    private Users userId;
+    @ManyToOne
+    @JoinColumn(name = "user_id",referencedColumnName = "id")
+    private AppUser appUser;
 
-    @Column(name = "user_id")
-    private Integer user_id;
+//    @Column(name = "user_id")
+//    private Integer user_id;
 
     @Column(name = "created")
     private Date created_date;

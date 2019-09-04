@@ -15,27 +15,13 @@
 <div th:replace="fragments/header"></div>
 
 
+
 <div th:each="blog: ${blogs}">
-    <div class="row">
-        <div class="card box-shadow col-md-4">
-            <div class="card-header">
-                <div class="row">
-                    <div class="col-lg-10">
-                        <h4 th:text="${blog.getCategory().getName()}" class="my-0 font-weight-normal">Category</h4>
-                    </div>
-                    <a th:href="@{/blog/updatePost(id=${blog.getId()})}"  class="btn btn-info" role="button">Edit</a>
 
-                </div>
-            </div>
-            <div class="card-body">
-                <h1 th:text="${blog.getName()}" class="card-title">Title</h1>
-                <div th:text="${blog.getContent()}" > Content </div>
-                <button type="button" class="btn btn-lg btn-block btn-outline-primary">More</button>
-            </div>
-        </div>
-    </div>
+
+    <th:block th:include="fragments/blogCard :: blogCard"></th:block>
+
 </div>
-
 <!--    fragment footer -->
     <div th:replace="fragments/footer"></div>
 

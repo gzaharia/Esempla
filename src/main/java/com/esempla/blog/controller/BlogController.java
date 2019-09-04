@@ -41,7 +41,7 @@ public class BlogController {
 
         post.setCreated_date(new Date());
         post.setBlog(blogRepository.findByAppUserUsername(principal.getName()));
-        post.setCategory(categoryRepository.findById(1l).get());
+        post.setCategory(categoryRepository.findById(2l).get());
         postRepository.save(post);
 
         return "redirect:/index";

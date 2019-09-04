@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<html>
+<head>
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+
+    <title>Login Page</title>
+    <!--Made with love by Mutiullah Samim -->
+
+    <!--Bootsrap 4 CDN-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!--Fontawesome CDN-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <!--Custom styles-->
+    <link rel="stylesheet" type="text/css" th:href="@{/css/loginPage.css}">
+</head>
+<body>
+<div class="container">
+    <div class="d-flex justify-content-center h-100">
+        <div class="card">
+            <div class="card-header">
+                <h3>Sign In</h3>
+                <div class="d-flex justify-content-end social_icon">
+                    <span><i class="fab fa-facebook-square"></i></span>
+                    <span><i class="fab fa-google-plus-square"></i></span>
+                    <span><i class="fab fa-twitter-square"></i></span>
+                </div>
+            </div>
+            <div class="card-body">
+
+                <form method="POST" th:action="@{/loginPage}" class="login-form">
+                    <h2 class="loginTitle">sign in</h2>
+                    <!--<div class="form-group">-->
+                    <!--<label for="exampleInputEmail1">Email address</label>-->
+                    <!--<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">-->
+                    <!--<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+                    <!--</div>-->
+                    <!--<div class="form-group">-->
+                    <!--<label for="exampleInputPassword1">Password</label>-->
+                    <!--<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">-->
+                    <!--</div>-->
+                    <div th:if="${error}" class="alert alert-danger">
+                        <span th:text="${error.toString()}" ></span>
+                    </div>
+                    <div th:if="${logout}" class="alert alert-success">
+                        <span th:text="${logout.toString()}" ></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Username</label>
+                        <input name="username" value="master" type="text" class="form-control" aria-describedby="emailHelp" placeholder="Enter email"/>
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input name="password" value="master" type="password" class="form-control" placeholder="Password"/>
+                    </div>
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Remember</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">LOGIN</button>
+                    <!--<a href="#" class="forgot-password">Forgot password?</a><br>-->
+                    <!--<a th:href="@{/registerPage}"    class="forgot-password">Create new account</a>-->
+                </form>
+
+            </div>
+            <div class="card-footer">
+                <div class="d-flex justify-content-center links">
+                    <a th:href="@{/registerPage}"    class="forgot-password">Create new account</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

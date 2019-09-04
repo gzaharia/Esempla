@@ -1,9 +1,9 @@
 package com.esempla.blog.config;
 
-import com.esempla.blog.service.UserDetailsServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -15,7 +15,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import javax.sql.DataSource;
 
-@RequiredArgsConstructor
+@Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
@@ -43,12 +43,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
         http
                 .authorizeRequests()
-                .antMatchers("/index/**").hasRole("ADMIN")
+                .antMatchers("/index/**").hasAnyRole("USER","ADMIN")
                 .antMatchers("/**")
                 .permitAll()
                 .and().formLogin()
-                .loginPage("/login")
-                .loginProcessingUrl("/login")
+                .loginPage("/loginPage")
+                .loginProcessingUrl("/loginPage")
                 .defaultSuccessUrl("/index")
                 .permitAll()
                 .and().logout()
@@ -58,24 +58,24 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and().httpBasic();
     }
 
-    @Override
-    public void configure(WebSecurity web) throws Exception {
-        web.ignoring()
-                .antMatchers(HttpMethod.OPTIONS, "/**")
-                .antMatchers("/i18n/**")
-                .antMatchers("/content/**")
-                .antMatchers("/h2-console/**")
-                .antMatchers("/resources/**")
-                .antMatchers("/static/**")
-                .antMatchers("/js/**")
-                .antMatchers("/css/**")
-                .antMatchers("/webjars/**")
-                .antMatchers("/dist/**")
-                .antMatchers("/bootstrap/**")
-                .antMatchers("/plugins/**")
-                .antMatchers("/images/**");
-
-    }
+//    @Override
+//    public void configure(WebSecurity web) throws Exception {
+//        web.ignoring()
+//                .antMatchers(HttpMethod.OPTIONS, "/**")
+//                .antMatchers("/i18n/**")
+//                .antMatchers("/content/**")
+//                .antMatchers("/h2-console/**")
+//                .antMatchers("/resources/**")
+//                .antMatchers("/static/**")
+//                .antMatchers("/js/**")
+//                .antMatchers("/css/**")
+//                .antMatchers("/webjars/**")
+//                .antMatchers("/dist/**")
+//                .antMatchers("/bootstrap/**")
+//                .antMatchers("/plugins/**")
+//                .antMatchers("/images/**");
+//
+//    }
 
 //    @Bean
 //    public DaoAuthenticationProvider authentificationProvider(){

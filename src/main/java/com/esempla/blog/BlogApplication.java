@@ -9,10 +9,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 public class BlogApplication {
 
     public static void main(String[] args) {
-
         BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-        System.out.println("\n\nPassword: " + encoder.encode("master") );
-
+        System.out.println("\n\nPassword: " + encoder.encode("dev") );
         SpringApplication.run(BlogApplication.class, args);
     }
 

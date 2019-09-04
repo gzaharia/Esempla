@@ -1,9 +1,6 @@
 package com.esempla.blog.domain;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -13,15 +10,14 @@ import java.util.Set;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
 public class Category {
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private Integer id;
+    @SequenceGenerator(name = "hibernate_sequence", sequenceName = "hibernate_sequence", initialValue = 1000, allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "hibernate_sequence")
+    private Long id;
 
     @Column(name = "name")
     private String name;
 
-    @OneToMany(cascade = CascadeType.ALL,
-            orphanRemoval = true)
-    Set<Post> posts;
 }

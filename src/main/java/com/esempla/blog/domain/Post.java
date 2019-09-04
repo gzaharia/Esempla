@@ -44,9 +44,8 @@ public class Post {
 //    @JoinColumn(name = "category_id",nullable = false)
 //    private Category categoryId;
 
-    @OneToMany(cascade = CascadeType.ALL,
-            orphanRemoval = true)
-    Set<Comments> comments;
+//    @OneToMany(cascade = CascadeType.ALL)
+//    Set<Comments> comments;
 
 
 

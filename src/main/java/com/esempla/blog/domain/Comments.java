@@ -16,16 +16,14 @@ public class Comments {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Lob
     @Column(name = "text")
     private String text;
 
     @Column(name = "created")
     private Date created_date;
 
-//    @ManyToOne
-//    @JoinColumn(name = "post_id",nullable = false)
-//    private Post postId;
+    @ManyToOne
+    private Post post;
 
 
 

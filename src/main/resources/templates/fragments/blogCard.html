@@ -21,8 +21,11 @@
 
                     </div>
 
-                    <a th:href="@{/blog/updatePost(id=${blog.getId()})}" class="btn btn-info" role="button">Edit</a>
-
+                    <span th:if="${authenticatedUserUsername.equals(blog.getBlog().getAppUser().getUsername()) or
+                    (authenticatedUserRole != null and authenticatedUserRole.equals('ROLE_ADMIN'))}" >
+                        <a th:href="@{/blog/updatePost(id=${blog.getId()})}" class="btn btn-info" role="button">Edit</a>
+                        <a th:href="@{/blog/deletePost(id=${blog.getId()})}" class="btn btn-danger" role="button">Delete</a>
+                    </span>
                 </div>
             </div>
             <div class="card-body">
@@ -37,42 +40,42 @@
                     </div>
                 </div>
 
-                    <br>
-                    <br>
-                    <div th:id="'comment'+${blog.getId()}" class="collapse">
+                <br>
+                <br>
+                <div th:id="'comment'+${blog.getId()}" class="collapse">
 
-                        <div th:each="comment:${blog.getComments()}" class="card my-2">
-                            <div class="card-header text-muted">
-                                <span>Posted on</span>
-                                <span th:text="${comment.getCreated_date().toLocaleString()}">no user</span>
-                                <span>by</span>
-                                <span th:text="${comment.getAppUser().getUsername()}"
-                                      class="text-info"> user </span>
-                            </div>
-                            <div class="card-body">
-                                <p th:text="${comment.getText()}" class="card-text"></p>
-                            </div>
+                    <div th:each="comment:${blog.getComments()}" class="card my-2">
+                        <div class="card-header text-muted">
+                            <span>Posted on</span>
+                            <span th:text="${comment.getCreated_date().toLocaleString()}">no user</span>
+                            <span>by</span>
+                            <span th:text="${comment.getAppUser().getUsername()}"
+                                  class="text-info"> user </span>
                         </div>
+                        <div class="card-body">
+                            <p th:text="${comment.getText()}" class="card-text"></p>
+                        </div>
+                    </div>
 
 
-                        <div class="container">
+                    <div class="container">
 
-                            <form th:action="@{/comment/save(postId=${blog.getId()} , username=${blog.getBlog().getAppUser().getUsername()})}"
-                            th:object="${newComment}" method="post">
+                        <form th:action="@{/comment/save(postId=${blog.getId()} , username=${blog.getBlog().getAppUser().getUsername()})}"
+                              th:object="${newComment}" method="post">
                             <input type="hidden" th:field="*{id}"/>
                             <div class="form-group">
-                            <label for="commentContent">Write your comment:</label>
-                            <input class="form-control" id="commentContent" th:field="*{text}">
+                                <label for="commentContent">Write your comment:</label>
+                                <input class="form-control" id="commentContent" th:field="*{text}">
                             </div>
                             <button type="submit" class="btn btn-primary">Submit</button>
-                            </form>
+                        </form>
 
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
+
+</div>
 </body>
 </html>

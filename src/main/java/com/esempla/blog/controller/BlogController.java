@@ -30,7 +30,7 @@ public class BlogController {
     public String twittFrom (Model model , Principal principal){
 
         model.addAttribute("post",new Post());
-        model.addAttribute("userDetails",principal);
+        model.addAttribute("authenticatedUserUsername", principal.getName());
         return "blogForm";
     }
 
@@ -43,6 +43,8 @@ public class BlogController {
         post.setBlog(blogRepository.findByAppUserUsername(principal.getName()));
         post.setCategory(categoryRepository.findById(2l).get());
         postRepository.save(post);
+        model.addAttribute("authenticatedUserUsername", principal.getName());
+
 
         return "redirect:/index";
     }
@@ -52,8 +54,16 @@ public class BlogController {
     @GetMapping("/updatePost")
     public String updatePost (@RequestParam("id") Long id, Model model , Principal principal){
         model.addAttribute("post", postRepository.findById(id));
-        model.addAttribute("userDetails",principal);
+        model.addAttribute("authenticatedUserUsername", principal.getName());
         return  "blogForm";
+    }
+
+    @GetMapping("/deletePost")
+    public String deletePost(@RequestParam("id") Long id, Model model, Principal principal){
+        postRepository.deleteById(id);
+        model.addAttribute("authenticatedUserUsername", principal.getName());
+
+        return "redirect:/appUser/homePage";
     }
 
 

@@ -31,7 +31,7 @@ public class CommentController {
 
 
     @PostMapping("/save")
-    public String saveOrUpdate (@RequestParam(value = "postId",required = false) Long postId,
+    public String save (@RequestParam(value = "postId",required = false) Long postId,
                                 @RequestParam(value = "username",required = false) String username,
                                 @ModelAttribute Comments comment , Model model , Principal principal){
 
@@ -42,7 +42,7 @@ public class CommentController {
         comment.setAppUser(appUserRepository.findByUsername(username));
         commentRepository.save(comment);
 
-        model.addAttribute("userDetails",principal);
+        model.addAttribute("authenticatedUserUsername", principal.getName());
         return "redirect:/appUser/homePage";
     }
 

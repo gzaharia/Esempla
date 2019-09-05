@@ -25,6 +25,10 @@ public class Comments {
     @ManyToOne
     private Post post;
 
+    @ManyToOne
+    @JoinColumn(name = "user_id",referencedColumnName = "id")
+    private AppUser appUser;
+
 
 
 }

@@ -137,7 +137,7 @@
         </column>
 
         <column name="name" type="varchar(255)">
-            |<constraints nullable="false" unique="true"/>
+            <constraints nullable="false" unique="true"/>
         </column>
 
         <column name="created" type="date">
@@ -192,7 +192,18 @@
             <constraints nullable="false"/>
         </column>
 
+        <column name="user_id" type="int">
+            <constraints nullable="false"/>
+        </column>
+
     </createTable>
+
+    <addForeignKeyConstraint baseColumnNames="user_id"
+                             baseTableName="comments"
+                             constraintName="fk_user_id"
+                             referencedColumnNames="id"
+                             referencedTableName="users"/>
+
 
     <addForeignKeyConstraint baseColumnNames="post_id"
                              baseTableName="comments"

@@ -41,4 +41,7 @@ public class AppUser {
     private String email;
     @Column(name = "created")
     private Date created_date;
+
+    @OneToMany(mappedBy = "appUser")
+    Set<Comments> comments;
 }

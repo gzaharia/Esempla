@@ -31,8 +31,7 @@ public class Blog {
     @Column(name = "created")
     private Date created_date;
 
-    @OneToMany(cascade = CascadeType.ALL,
-            orphanRemoval = true)
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "blog")
     Set<Post> posts = new HashSet<>();
 
 

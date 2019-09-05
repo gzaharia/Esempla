@@ -1,21 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
 <div th:fragment="blogCard">
 
-<div class="row">
-    <div class="card box-shadow col-md-4">
-        <div class="card-header">
-            <div class="row">
-                <div class="col-lg-10">
-                    <h4 th:text="${blog.getCategory().getName()}" class="my-0 font-weight-normal">Category</h4>
+    <div class="row my-4">
+        <div class="card box-shadow col-md-4">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-lg-10">
+                        <h4 th:text="'Category: '+${blog.getCategory().getName()}" class="my-0 font-weight-normal">
+                            Category</h4>
+                        <h4 th:text="'User: '+${blog.getBlog().getAppUser().getUsername()}"
+                            class="my-0 font-weight-normal">
+                            Category</h4>
+
+                    </div>
+
+                    <a th:href="@{/blog/updatePost(id=${blog.getId()})}" class="btn btn-info" role="button">Edit</a>
+
+                </div>
+            </div>
+            <div class="card-body">
+                <h1 th:text="${blog.getName()}" class="card-title">Title</h1>
+                <div th:text="${blog.getContent()}"> Content</div>
+                <button type="button" class="btn btn-lg btn-block btn-outline-primary">More</button>
+
+
+                <div class="card-footer py-1">
+                    <div class="text-primary float-left mt-3" data-toggle="collapse"
+                         th:attr="data-target='#comment'+${blog.getId()}" style="cursor: pointer;">Comments
+                    </div>
                 </div>
 
-                <a th:href="@{/blog/updatePost(id=${blog.getId()})}"  class="btn btn-info" role="button">Edit</a>
+                    <br>
+                    <br>
+                    <div th:id="'comment'+${blog.getId()}" class="collapse">
 
+                        <div th:each="comment:${blog.getComments()}" class="card my-2">
+                            <div class="card-header text-muted">
+                                <span>Posted on</span>
+                                <span th:text="${comment.getCreated_date().toLocaleString()}">no user</span>
+                                <span>by</span>
+                                <span th:text="${comment.getAppUser().getUsername()}"
+                                      class="text-info"> user </span>
+                            </div>
+                            <div class="card-body">
+                                <p th:text="${comment.getText()}" class="card-text"></p>
+                            </div>
+                        </div>
+
+
+                        <div class="container">
+
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="card-body">
-            <h1 th:text="${blog.getName()}" class="card-title">Title</h1>
-            <div th:text="${blog.getContent()}" > Content </div>
-            <button type="button" class="btn btn-lg btn-block btn-outline-primary">More</button>
-        </div>
+
     </div>
-</div>
+</body>
+</html>

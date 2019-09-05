@@ -9,5 +9,6 @@ public interface PostRepository extends JpaRepository<Post,Long> {
 
     List<Post> findAllByCategoryId(Long id);
     List<Post> findAllByBlogAppUserId (Long id);
+    List<Post> findAllByBlogAppUserUsername (String username);
 
 }

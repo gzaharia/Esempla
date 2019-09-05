@@ -18,13 +18,12 @@
 
 <div th:each="blog: ${blogs}">
 
-    <!--<h1 th:text="${blog.getComments().get(0).getCreated_date()}" class="card-title">Title</h1>-->
 
     <th:block th:include="fragments/blogCard :: blogCard"></th:block>
 
 </div>
 <!--    fragment footer -->
-    <div th:replace="fragments/footer"></div>
+<div th:replace="fragments/footer"></div>
 
 </div>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

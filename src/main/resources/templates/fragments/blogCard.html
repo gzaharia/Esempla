@@ -57,6 +57,16 @@
 
                         <div class="container">
 
+                            <form th:action="@{/comment/save(postId=${blog.getId()} , username=${blog.getBlog().getAppUser().getUsername()})}"
+                            th:object="${newComment}" method="post">
+                            <input type="hidden" th:field="*{id}"/>
+                            <div class="form-group">
+                            <label for="commentContent">Write your comment:</label>
+                            <input class="form-control" id="commentContent" th:field="*{text}">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                            </form>
+
                         </div>
                     </div>
                 </div>

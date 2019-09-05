@@ -24,6 +24,7 @@ public class HomeController {
     @GetMapping
     public String getHome(Model model){
         model.addAttribute("blogs",postRepository.findAll());
+        model.addAttribute("newComment", new Comments());
         return "index";
     }
 
@@ -34,14 +35,10 @@ public class HomeController {
         model.addAttribute("blogs",postRepository.findAllByCategoryId(categoryId));
         List<Post> postList = postRepository.findAllByCategoryId(categoryId);
         Comments comments = postList.get(0).getComments().get(0);
+        model.addAttribute("newComment", new Comments());
      return "showPostsByCategory";
 
     }
 
-    @GetMapping("/message2")
-    @ResponseBody
-    public List<Post> getMessage2(@RequestParam("userId") Long userId){
-        return postRepository.findAllByBlogAppUserId(userId);
-    }
 
 }

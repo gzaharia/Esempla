@@ -60,7 +60,7 @@
 
                     <div class="container">
 
-                        <form th:action="@{/comment/save(postId=${blog.getId()} , username=${blog.getBlog().getAppUser().getUsername()})}"
+                        <form th:action="@{/comment/save(postId=${blog.getId()} , username=${authenticatedUserUsername})}"
                               th:object="${newComment}" method="post">
                             <input type="hidden" th:field="*{id}"/>
                             <div class="form-group">

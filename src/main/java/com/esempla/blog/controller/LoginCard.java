@@ -1,8 +1,10 @@
 package com.esempla.blog.controller;
 
 import com.esempla.blog.domain.AppUser;
+import com.esempla.blog.domain.Blog;
 import com.esempla.blog.domain.Roles;
 import com.esempla.blog.domain.RolesType;
+import com.esempla.blog.repository.BlogRepository;
 import com.esempla.blog.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -12,15 +14,20 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.security.Principal;
+import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.HashSet;
+import java.util.Set;
 
 @Controller
 public class LoginCard {
 
     @Autowired
     private UserRepository userRepository;
+
+    @Autowired
+    private BlogRepository blogRepository;
 
     @GetMapping("/loginPage")
     public ModelAndView loginPage(@RequestParam(value = "error", required = false) String error,
@@ -74,13 +81,20 @@ public class LoginCard {
         newUser.setEmail(newUser.getUsername() + "@gmail.com");
         newUser.setCreated_date(new Date());
 
+        newUser = userRepository.save(newUser);
 
         Roles role = new Roles();
         role.setName(RolesType.ROLE_USER);
 
+        Blog blogNew = new Blog();
+        blogNew.setAppUser(newUser);
+        blogNew.setName(newUser.getUsername() + " blog");
+        blogNew.setCreated_date(LocalDate.now());
+
         newUser.setUsersRoles(new HashSet<>(Arrays.asList(role)));
 
-        userRepository.save(newUser);
+        blogRepository.save(blogNew);
+
         return "redirect:/loginPage";
     }
 

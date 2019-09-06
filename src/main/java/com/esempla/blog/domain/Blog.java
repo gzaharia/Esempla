@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
@@ -21,7 +22,7 @@ public class Blog {
     @Column(name = "name")
     private String name;
 
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "user_id",referencedColumnName = "id")
     private AppUser appUser;
 
@@ -29,7 +30,7 @@ public class Blog {
 //    private Integer user_id;
 
     @Column(name = "created")
-    private Date created_date;
+    private LocalDate created_date;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "blog")
     Set<Post> posts = new HashSet<>();

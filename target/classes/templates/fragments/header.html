@@ -11,23 +11,43 @@
         <img class="my-0 mr-md-auto" style="width:200px; height: 60px" th:src="@{/images/logo.png}" alt=""/>
     </div>
     <div class="col-md-4 text-center">
-        <nav class="my-2 my-md-0">
-            <a th:href="@{/index}" th:text="Index" class="nav-link">Index</a>
-            <a th:href="@{/appUser/homePage}" th:text="HomePage" class="nav-link">HomePage</a>
-            <a th:href="@{/index/message?categoryId=1}" th:text="Art" class="nav-link">Art</a>
-            <a th:href="@{/index/message?categoryId=2}" th:text="Policy" class="nav-link">Policy</a>
-            <a th:href="@{/index/message?categoryId=3}" th:text="IT" class="nav-link">IT</a>
-            <a th:href="@{/blog/form}" th:text="CreatePost" class="nav-link">Create Post</a>
+        <nav class="navbar navbar-expand">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a th:href="@{/index}" th:text="Index" class="nav-link">Index</a>
+                </li>
+                <li class="nav-item">
+                    <a th:href="@{/appUser/homePage}" th:text="HomePage" class="nav-link">HomePage</a>
+                </li>
+                <li class="nav-item">
+                    <a th:href="@{/index/message?categoryId=1}" th:text="Art" class="nav-link">Art</a>
+                </li>
+                <li class="nav-item">
+                    <a th:href="@{/index/message?categoryId=2}" th:text="Policy" class="nav-link">Policy</a>
+                </li>
+                <li class="nav-item">
+                    <a th:href="@{/index/message?categoryId=3}" th:text="IT" class="nav-link">IT</a>
+                </li>
+                <li class="nav-item">
+                    <a th:href="@{/blog/form}" th:text="CreatePost" class="nav-link">Create Post</a>
+                </li>
+                <li class="nav-item">
+                    <span th:text="${authenticatedUserUsername}" class="nav-link">Guest</span>
+                </li>
 
-            <span th:text="${authenticatedUserUsername}" class="nav-link">Guest</span>
 
-            <span th:if="${authenticatedUserUsername.equals('Guest')}" >
+                <li class="nav-item ml-5">
+            <span th:if="${authenticatedUserUsername.equals('Guest')}">
                     <a class="btn btn-outline-primary" th:href="@{/loginPage}">Sign in</a>
             </span>
 
-            <span th:unless="${authenticatedUserUsername.equals('Guest')}" >
+
+                    <span th:unless="${authenticatedUserUsername.equals('Guest')}">
                     <a th:href="@{/logoutPage}" class="nav-link">Log Out</a>
-            </span>
+                    </span>
+                </li>
+
+            </ul>
 
 
         </nav>

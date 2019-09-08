@@ -31,6 +31,7 @@ public class BlogController {
 
         model.addAttribute("post",new Post());
         model.addAttribute("authenticatedUserUsername", principal.getName());
+        model.addAttribute("categories", categoryRepository.findAll());
         return "blogForm";
     }
 
@@ -41,7 +42,7 @@ public class BlogController {
 
         post.setCreated_date(new Date());
         post.setBlog(blogRepository.findByAppUserUsername(principal.getName()));
-        post.setCategory(categoryRepository.findById(2l).get());
+        //post.setCategory(categoryRepository.findById(2l).get());
         postRepository.save(post);
         model.addAttribute("authenticatedUserUsername", principal.getName());
 

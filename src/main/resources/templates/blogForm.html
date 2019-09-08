@@ -33,6 +33,12 @@
         <input class="form-control" id="content" placeholder="name" th:field="*{content}">
     </div>
 
+    <select th:field="*{category}">
+        <option th:each="c : ${categories}" th:value="${c.getId()}" th:text="${c.getName()}"></option>
+    </select>
+    <br>
+    <br>
+
     <button type="submit" class="btn btn-primary">Save</button>
 </form>
 

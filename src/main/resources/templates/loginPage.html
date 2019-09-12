@@ -38,16 +38,6 @@
             <div class="card-body">
 
                 <form method="POST" th:action="@{/loginPage}" class="login-form">
-                    <h2 class="loginTitle">sign in</h2>
-                    <!--<div class="form-group">-->
-                    <!--<label for="exampleInputEmail1">Email address</label>-->
-                    <!--<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">-->
-                    <!--<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
-                    <!--</div>-->
-                    <!--<div class="form-group">-->
-                    <!--<label for="exampleInputPassword1">Password</label>-->
-                    <!--<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">-->
-                    <!--</div>-->
                     <div th:if="${error}" class="alert alert-danger">
                         <span th:text="${error.toString()}" ></span>
                     </div>
@@ -55,27 +45,25 @@
                         <span th:text="${logout.toString()}" ></span>
                     </div>
                     <div class="form-group">
-                        <label>Username</label>
+                        <label style="color: white;">Username</label>
                         <input name="username" value="master" type="text" class="form-control" aria-describedby="emailHelp" placeholder="Enter email"/>
-                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        <small id="emailHelp" class="form-text" style="color: white;">We'll never share your email with anyone else.</small>
                     </div>
                     <div class="form-group">
-                        <label>Password</label>
+                        <label style="color: white;">Password</label>
                         <input name="password" value="master" type="password" class="form-control" placeholder="Password"/>
                     </div>
                     <div class="form-group form-check">
                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Remember</label>
+                        <label class="form-check-label" for="exampleCheck1" style="color: white;">Remember</label>
                     </div>
                     <button type="submit" class="btn btn-primary">LOGIN</button>
-                    <!--<a href="#" class="forgot-password">Forgot password?</a><br>-->
-                    <!--<a th:href="@{/registerPage}"    class="forgot-password">Create new account</a>-->
                 </form>
 
             </div>
             <div class="card-footer">
                 <div class="d-flex justify-content-center links">
-                    <a th:href="@{/registerPage}"    class="forgot-password">Create new account</a>
+                    <a th:href="@{/registerPage}" class="forgot-password" style="color:white">Create new account</a>
                 </div>
 
             </div>

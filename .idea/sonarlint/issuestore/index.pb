@@ -3,8 +3,6 @@ c
 3src/main/java/com/esempla/blog/BlogApplication.java,7\1\713b7b0c1e190db51d394a4dd929b8c9e071c653
 9
 	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
-q
-Asrc/main/java/com/esempla/blog/controller/CategoryController.java,6\3\634202c0a5373e1ae059f601fbefeb1b587f5b9c
 8
 mvnw.cmd,1\f\1f1763f358c257ea3515417352b82b0165647ad1
 4
@@ -131,8 +129,6 @@ R
 ,src/main/resources/templates/logoutPage.html,2\2\22744a22cf20b491bbba01628c62e5649f7371d9
 `
 0src/main/java/com/esempla/blog/domain/Roles.java,2\0\2040dd9388207c8acaf4775abdd27c04f9226991
-`
-0src/main/java/com/esempla/blog/domain/Users.java,7\3\73d6b3803f9ba4369a7d58749adadc44b2003e16
 d
 4src/main/java/com/esempla/blog/domain/RolesType.java,0\4\04ab5af36f143cf7bb55741f87166cb5228fd0b6
 b
@@ -179,3 +175,11 @@ n
 >src/main/resources/db/changelog/0000000000_initialDatabase.xml,a\9\a936b8fbc528a5c71519873f4c78a44b71ab4a5b
 e
 5src/main/resources/templates/showPostsByCategory.html,f\b\fb37e6981a90a7e73fd82569d3c32b0e192a9be8
+q
+Asrc/main/java/com/esempla/blog/controller/CategoryController.java,6\3\634202c0a5373e1ae059f601fbefeb1b587f5b9c
+^
+.src/main/resources/templates/categoryForm.html,5\f\5feb3e0e3ae6def71e8d2c34815d2b280aefef4f
+p
+@src/main/java/com/esempla/blog/controller/AppUserController.java,3\b\3bd9959ff0cd4302c1313f2b9a8c338bec51d9eb
+m
+=src/main/java/com/esempla/blog/controller/BlogController.java,d\a\dad89af60a0f81e758800c1420dacddd964e54c4

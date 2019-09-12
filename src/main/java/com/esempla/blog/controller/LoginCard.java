@@ -1,12 +1,12 @@
 package com.esempla.blog.controller;
 
-import com.esempla.blog.domain.AppUser;
-import com.esempla.blog.domain.Blog;
-import com.esempla.blog.domain.Roles;
-import com.esempla.blog.domain.RolesType;
+import com.esempla.blog.domain.*;
 import com.esempla.blog.repository.BlogRepository;
+import com.esempla.blog.repository.CategoryRepository;
 import com.esempla.blog.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,10 +15,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import java.security.Principal;
 import java.time.LocalDate;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 @Controller
 public class LoginCard {
@@ -28,6 +25,11 @@ public class LoginCard {
 
     @Autowired
     private BlogRepository blogRepository;
+
+    @Autowired
+    private CategoryRepository categoryRepository;
+
+
 
     @GetMapping("/loginPage")
     public ModelAndView loginPage(@RequestParam(value = "error", required = false) String error,
@@ -98,6 +100,18 @@ public class LoginCard {
         return "redirect:/loginPage";
     }
 
+
+    @ModelAttribute("allCategories")
+    public List<Category> getAllCategories(){
+        return categoryRepository.findAll();
+    }
+
+    @ModelAttribute("authenticatedUserUsername")
+    public String getAuthenticatedUserUsername(){
+        return SecurityContextHolder.getContext().getAuthentication().getPrincipal() instanceof UserDetails ?
+                ((UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getUsername() : "Guest";
+
+    }
 
 
 

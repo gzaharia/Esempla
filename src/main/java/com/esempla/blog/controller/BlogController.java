@@ -1,16 +1,20 @@
 package com.esempla.blog.controller;
 
+import com.esempla.blog.domain.Category;
 import com.esempla.blog.domain.Post;
 import com.esempla.blog.repository.BlogRepository;
 import com.esempla.blog.repository.CategoryRepository;
 import com.esempla.blog.repository.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
 import java.util.Date;
+import java.util.List;
 
 @RequestMapping("/blog")
 @Controller
@@ -27,10 +31,9 @@ public class BlogController {
 
 
     @GetMapping("/form")
-    public String twittFrom (Model model , Principal principal){
+    public String blogForm (Model model , Principal principal){
 
         model.addAttribute("post",new Post());
-        model.addAttribute("authenticatedUserUsername", principal.getName());
         model.addAttribute("categories", categoryRepository.findAll());
         return "blogForm";
     }
@@ -44,7 +47,6 @@ public class BlogController {
         post.setBlog(blogRepository.findByAppUserUsername(principal.getName()));
         //post.setCategory(categoryRepository.findById(2l).get());
         postRepository.save(post);
-        model.addAttribute("authenticatedUserUsername", principal.getName());
 
 
         return "redirect:/index";
@@ -55,17 +57,28 @@ public class BlogController {
     @GetMapping("/updatePost")
     public String updatePost (@RequestParam("id") Long id, Model model , Principal principal){
         model.addAttribute("post", postRepository.findById(id));
-        model.addAttribute("authenticatedUserUsername", principal.getName());
+        model.addAttribute("categories",categoryRepository.findAll());
         return  "blogForm";
     }
 
     @GetMapping("/deletePost")
     public String deletePost(@RequestParam("id") Long id, Model model, Principal principal){
         postRepository.deleteById(id);
-        model.addAttribute("authenticatedUserUsername", principal.getName());
 
         return "redirect:/appUser/homePage";
     }
 
+
+    @ModelAttribute("allCategories")
+    public List<Category> getAllCategories(){
+        return categoryRepository.findAll();
+    }
+
+    @ModelAttribute("authenticatedUserUsername")
+    public String getAuthenticatedUserUsername(){
+        return SecurityContextHolder.getContext().getAuthentication().getPrincipal() instanceof UserDetails ?
+                ((UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getUsername() : "Guest";
+
+    }
 
 }

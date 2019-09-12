@@ -16,21 +16,25 @@
 <!--fragment header-->
 <div th:replace="fragments/header"></div>
 
-
+<div class="container">
 
 <form method="post" th:action="@{/blog/saveOrUpdate}" th:object="${post}" class="login-form">
     <input type="hidden" th:field="*{id}"/>
 
 
     <div class="form-group">
-        <label for="name">Username</label>
-        <input class="form-control" id="name" placeholder="name" th:field="*{name}">
+        <label for="name">Title</label>
+        <br>
+        <textarea placeholder="Remember, be nice!" id="name" th:field="*{name}" cols="50" rows="2"></textarea>
+        <!--<input class="text" id="name" placeholder="name" th:field="*{name}">-->
     </div>
 
 
     <div class="form-group">
-        <label for="content">Username</label>
-        <input class="form-control" id="content" placeholder="name" th:field="*{content}">
+        <label for="content">Content</label>
+        <br>
+        <textarea placeholder="Remember, be nice!" id="content" th:field="*{content}" cols="150" rows="5"></textarea>
+        <!--<input class="form-control" id="content" placeholder="name" th:field="*{content}">-->
     </div>
 
     <select th:field="*{category}">
@@ -43,7 +47,7 @@
 </form>
 
 
-
-
+    <div th:replace="fragments/footer"></div>
+</div>
 </body>
 </html>

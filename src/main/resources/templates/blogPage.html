@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>index</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<body>
+<!--fragment header-->
+<div th:replace="fragments/header"></div>
+
+
+<div class="container">
+    <div class="row">
+
+            <div class="row my-4">
+
+                <div class="card col-10">
+                    <div class="card-title">
+
+                                <h4 th:text="'Category: '+${blog.getCategory().getName()}"
+                                    class="my-0 font-weight-normal">
+                                    Category</h4>
+                                <h4 th:text="'User: '+${blog.getBlog().getAppUser().getUsername()}"
+                                    class="my-0 font-weight-normal">
+                                    Category</h4>
+
+
+                            <span th:if="${authenticatedUserUsername.equals(blog.getBlog().getAppUser().getUsername()) or
+                    (authenticatedUserRole != null and authenticatedUserRole.equals('ROLE_ADMIN'))}">
+                        <a th:href="@{/blog/updatePost(id=${blog.getId()})}" class="btn btn-info" role="button">Edit</a>
+                        <a th:href="@{/blog/deletePost(id=${blog.getId()})}" class="btn btn-danger"
+                           role="button">Delete</a>
+                    </span>
+                    </div>
+                    <div class="card-body">
+                        <h1 th:text="${blog.getName()}" class="card-title">Title</h1>
+                        <div th:text="${blog.getContent()}"> Content</div>
+
+
+                        <div>
+                            <div class="text-primary float-left mt-3" data-toggle="collapse"
+                                 th:attr="data-target='#comment'+${blog.getId()}" style="cursor: pointer;">Comments
+                            </div>
+                        </div>
+
+                        <br>
+                        <br>
+                        <div th:id="'comment'+${blog.getId()}" class="collapse">
+
+                            <div th:each="comment:${blog.getComments()}" class="card my-2">
+                                <div class="card-header text-muted">
+                                    <span>Posted on</span>
+                                    <span th:text="${comment.getCreated_date().toLocaleString()}">no user</span>
+                                    <span>by</span>
+                                    <span th:text="${comment.getAppUser().getUsername()}"
+                                          class="text-info"> user </span>
+                                </div>
+                                <div class="card-body">
+                                    <p th:text="${comment.getText()}" class="card-text"></p>
+                                </div>
+                            </div>
+
+
+                            <div class="container">
+
+                                <form th:action="@{/comment/save(postId=${blog.getId()} , username=${authenticatedUserUsername})}"
+                                      th:object="${newComment}" method="post">
+                                    <input type="hidden" th:field="*{id}"/>
+                                    <div class="form-group">
+                                        <label for="commentContent">Write your comment:</label>
+                                        <input class="form-control" id="commentContent" th:field="*{text}">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+    </div>
+
+    <!--    fragment footer -->
+    <div th:replace="fragments/footer"></div>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="https://getbootstrap.com/docs/4.0/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script src="https://getbootstrap.com/docs/4.0/assets/js/vendor/popper.min.js"></script>
+<script src="https://getbootstrap.com/docs/4.0/dist/js/bootstrap.min.js"></script>
+<script src="https://getbootstrap.com/docs/4.0/assets/js/vendor/holder.min.js"></script>
+<script>
+    Holder.addTheme('thumb', {
+        bg: '#55595c',
+        fg: '#eceeef',
+        text: 'Thumbnail'
+    });
+</script>
+</body>
+</html>

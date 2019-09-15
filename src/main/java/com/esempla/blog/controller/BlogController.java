@@ -1,11 +1,14 @@
 package com.esempla.blog.controller;
 
 import com.esempla.blog.domain.Category;
+import com.esempla.blog.domain.Comments;
 import com.esempla.blog.domain.Post;
 import com.esempla.blog.repository.BlogRepository;
 import com.esempla.blog.repository.CategoryRepository;
 import com.esempla.blog.repository.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
@@ -14,6 +17,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
 import java.util.Date;
+import java.util.Iterator;
 import java.util.List;
 
 @RequestMapping("/blog")
@@ -66,6 +70,22 @@ public class BlogController {
         postRepository.deleteById(id);
 
         return "redirect:/appUser/homePage";
+    }
+
+
+    @GetMapping("/blogPage")
+    public String getBlogById(@RequestParam("blogId") Long blogId, Model model){
+
+        model.addAttribute("blog",postRepository.findById(blogId).get());
+
+        return "blogPage";
+
+    }
+
+
+    @ModelAttribute("newComment")
+    public Comments getNewComment(){
+        return new Comments();
     }
 
 

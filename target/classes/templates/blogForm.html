@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<html>
+<head>
+    <title>index</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<body>
+<!--fragment header-->
+<div th:replace="fragments/header"></div>
+
+<div class="container">
+
+<form method="post" th:action="@{/blog/saveOrUpdate}" th:object="${post}" class="login-form">
+    <input type="hidden" th:field="*{id}"/>
+
+
+    <div class="form-group">
+        <label for="name">Title</label>
+        <br>
+        <textarea placeholder="Remember, be nice!" id="name" th:field="*{name}" cols="50" rows="2"></textarea>
+        <!--<input class="text" id="name" placeholder="name" th:field="*{name}">-->
+    </div>
+
+
+    <div class="form-group">
+        <label for="content">Content</label>
+        <br>
+        <textarea placeholder="Remember, be nice!" id="content" th:field="*{content}" cols="150" rows="5"></textarea>
+        <!--<input class="form-control" id="content" placeholder="name" th:field="*{content}">-->
+    </div>
+
+    <select th:field="*{category}">
+        <option th:each="c : ${categories}" th:value="${c.getId()}" th:text="${c.getName()}"></option>
+    </select>
+    <br>
+    <br>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
+
+
+    <div th:replace="fragments/footer"></div>
+</div>
+</body>
+</html>

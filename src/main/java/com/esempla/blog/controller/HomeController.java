@@ -2,9 +2,9 @@ package com.esempla.blog.controller;
 
 import com.esempla.blog.domain.Category;
 import com.esempla.blog.domain.Comments;
-import com.esempla.blog.domain.Post;
 import com.esempla.blog.repository.CategoryRepository;
 import com.esempla.blog.repository.PostRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.GrantedAuthority;
@@ -12,22 +12,24 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.security.Principal;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Set;
 
 @Controller
 @RequestMapping("/index")
+@RequiredArgsConstructor
 public class HomeController {
 
-    @Autowired
-    private PostRepository postRepository;
 
-    @Autowired
-    private CategoryRepository categoryRepository;
+    private final PostRepository postRepository;
+
+    private final CategoryRepository categoryRepository;
 
     @GetMapping
     public String getHome(Model model, Principal principal){

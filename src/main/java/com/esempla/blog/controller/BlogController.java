@@ -6,9 +6,7 @@ import com.esempla.blog.domain.Post;
 import com.esempla.blog.repository.BlogRepository;
 import com.esempla.blog.repository.CategoryRepository;
 import com.esempla.blog.repository.PostRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.GrantedAuthority;
+import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
@@ -17,25 +15,22 @@ import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
 import java.util.Date;
-import java.util.Iterator;
 import java.util.List;
 
 @RequestMapping("/blog")
 @Controller
+@RequiredArgsConstructor
 public class BlogController {
 
-    @Autowired
-    private BlogRepository blogRepository;
+    private final BlogRepository blogRepository;
 
-    @Autowired
-    private CategoryRepository categoryRepository;
+    private final CategoryRepository categoryRepository;
 
-    @Autowired
-    private PostRepository postRepository;
+    private final PostRepository postRepository;
 
 
     @GetMapping("/form")
-    public String blogForm (Model model , Principal principal){
+    public String getBlogForm (Model model){
 
         model.addAttribute("post",new Post());
         model.addAttribute("categories", categoryRepository.findAll());
@@ -44,8 +39,18 @@ public class BlogController {
 
 
 
-    @PostMapping("/saveOrUpdate")
-    public String saveOrUpdate (@ModelAttribute Post post, Model model , Principal principal){
+    @PostMapping("/save")
+    public String save (@ModelAttribute Post post, Principal principal){
+
+        post.setCreated_date(new Date());
+        post.setBlog(blogRepository.findByAppUserUsername(principal.getName()));
+        postRepository.save(post);
+
+
+        return "redirect:/index";
+    }
+    @PostMapping("/update")
+    public String update (@ModelAttribute Post post, Principal principal){
 
         post.setCreated_date(new Date());
         post.setBlog(blogRepository.findByAppUserUsername(principal.getName()));
@@ -58,14 +63,14 @@ public class BlogController {
 
 
     @GetMapping("/updatePost")
-    public String updatePost (@RequestParam("id") Long id, Model model , Principal principal){
+    public String updatePost (@RequestParam("id") Long id, Model model){
         model.addAttribute("post", postRepository.findById(id));
         model.addAttribute("categories",categoryRepository.findAll());
         return  "blogForm";
     }
 
     @GetMapping("/deletePost")
-    public String deletePost(@RequestParam("id") Long id, Model model, Principal principal){
+    public String deletePost(@RequestParam("id") Long id){
         postRepository.deleteById(id);
 
         return "redirect:/appUser/homePage";

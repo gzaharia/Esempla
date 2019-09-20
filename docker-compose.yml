@@ -1,0 +1,19 @@
+version: '1'
+services:
+  db:
+  image: postgres
+  restart: always
+  environmnt:
+    - POSTGRES_DB=blog
+    - POSTGRES_USER=blog
+    - POSTGRES_PASSWORD=postgres
+  ports:
+    - 5432:5432
+
+  blog-app:
+    image: gzaharia/blog
+    environment:
+    - _JAVA_OPTIONS=-Xmx512m -Xms256m
+    - SPRING_PROFILES_ACTIVE=prod
+    - SPRING_DATASOURCE_USERNAME=
+    - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/library?useUnicode=true&allowPublicKeyRetrieval=true&useSSL=false

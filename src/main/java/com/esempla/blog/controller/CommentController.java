@@ -7,6 +7,7 @@ import com.esempla.blog.repository.AppUserRepository;
 import com.esempla.blog.repository.CategoryRepository;
 import com.esempla.blog.repository.CommentRepository;
 import com.esempla.blog.repository.PostRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -23,26 +24,22 @@ import java.util.List;
 
 @RequestMapping("comment")
 @Controller
+@RequiredArgsConstructor
 public class CommentController {
 
-    @Autowired
-    private PostRepository postRepository;
 
-    @Autowired
-    private AppUserRepository appUserRepository;
+    private final PostRepository postRepository;
 
-    @Autowired
-    private CommentRepository commentRepository;
+    private final AppUserRepository appUserRepository;
 
-    @Autowired
-    private CategoryRepository categoryRepository;
+    private final CommentRepository commentRepository;
 
-
+    private final CategoryRepository categoryRepository;
 
     @PostMapping("/save")
     public String save (@RequestParam(value = "postId",required = false) Long postId,
                                 @RequestParam(value = "username",required = false) String username,
-                                @ModelAttribute Comments comment , Model model , Principal principal){
+                                @ModelAttribute Comments comment){
 
 
 

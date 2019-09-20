@@ -5,7 +5,7 @@ import com.esempla.blog.domain.Comments;
 import com.esempla.blog.repository.AppUserRepository;
 import com.esempla.blog.repository.CategoryRepository;
 import com.esempla.blog.repository.PostRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -22,22 +22,20 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/appUser")
+@RequiredArgsConstructor
 public class AppUserController {
 
 
-    @Autowired
-    private AppUserRepository appUserRepository;
 
-    @Autowired
-    private PostRepository postRepository;
+    private final AppUserRepository appUserRepository;
 
-    @Autowired
-    private CategoryRepository categoryRepository;
+    private final PostRepository postRepository;
 
+    private final CategoryRepository categoryRepository;
 
 
     @GetMapping("/homePage")
-    public String homePage(Model model, Principal principal) {
+    public String getHomePage(Model model, Principal principal) {
 
 
         if (principal != null) {

@@ -3,7 +3,6 @@ package com.esempla.blog.domain;
 import lombok.*;
 
 import javax.persistence.*;
-import java.util.Set;
 
 @Builder
 @Data

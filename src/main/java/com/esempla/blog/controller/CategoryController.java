@@ -3,6 +3,7 @@ package com.esempla.blog.controller;
 
 import com.esempla.blog.domain.Category;
 import com.esempla.blog.repository.CategoryRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -18,21 +19,29 @@ import java.util.List;
 
 @Controller
 @RequestMapping("category")
+@RequiredArgsConstructor
 public class CategoryController {
 
-    @Autowired
-    private CategoryRepository categoryRepository;
+    private final CategoryRepository categoryRepository;
 
     @GetMapping("/form")
-    public String categoryForm (Model model , Principal principal){
-
+    public String createCategoryForm (Model model){
         model.addAttribute("category",new Category());
         return "categoryForm";
     }
 
 
-    @PostMapping("/saveOrUpdate")
-    public String saveOrUpdate (@ModelAttribute Category category, Model model , Principal principal){
+    @PostMapping("/save")
+    public String save (@ModelAttribute Category category){
+
+
+        categoryRepository.save(category);
+
+        return "redirect:/index";
+    }
+
+    @PostMapping("/update")
+    public String update (@ModelAttribute Category category){
 
 
         categoryRepository.save(category);

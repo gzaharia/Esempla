@@ -4,30 +4,38 @@ import com.esempla.blog.domain.*;
 import com.esempla.blog.repository.BlogRepository;
 import com.esempla.blog.repository.CategoryRepository;
 import com.esempla.blog.repository.UserRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.security.Principal;
 import java.time.LocalDate;
-import java.util.*;
+import java.util.Arrays;
+import java.util.Date;
+import java.util.HashSet;
+import java.util.List;
 
 @Controller
+@RequiredArgsConstructor
 public class LoginCard {
 
-    @Autowired
-    private UserRepository userRepository;
 
-    @Autowired
-    private BlogRepository blogRepository;
+    private final UserRepository userRepository;
 
-    @Autowired
-    private CategoryRepository categoryRepository;
+
+    private final BlogRepository blogRepository;
+
+
+    private final CategoryRepository categoryRepository;
 
 
 
@@ -59,7 +67,7 @@ public class LoginCard {
     }
 
     @GetMapping("/registerPage")
-    public String registerPage(Model model, Principal principal) {
+    public String registerPage(Model model) {
 
 
         model.addAttribute("newUser",new AppUser());
@@ -70,7 +78,7 @@ public class LoginCard {
 
 
     @PostMapping("/registerNewUser")
-    public String registerNewUser(@ModelAttribute AppUser newUser, Model model, Principal principal) {
+    public String registerNewUser(@ModelAttribute AppUser newUser) {
 
 
         BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();

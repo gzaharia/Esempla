@@ -8,7 +8,6 @@ import lombok.ToString;
 import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
-import java.util.Set;
 
 @Data
 @Entity
@@ -27,7 +26,6 @@ public class Post {
     @Column(name = "created")
     private Date created_date;
 
-    //@Lob
     @Column(name = "content")
     private String content;
 

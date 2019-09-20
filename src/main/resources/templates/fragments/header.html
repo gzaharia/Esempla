@@ -29,6 +29,7 @@
                         <a  th:each="category:${allCategories}"  th:text="${category.getName()}"  th:href="@{/index/message(categoryId=${category.getId()})}" class="dropdown-item" >Action</a>
                     </div>
                 </li>
+
                 <li class="nav-item">
                     <a th:href="@{/blog/form}" th:text="CreatePost" class="nav-link">Create Post</a>
                 </li>

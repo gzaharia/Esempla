@@ -1,3 +1,0 @@
-username;password;first_name;last_name;email;created
-master;$2a$10$vqVmLPD0fLykWGIgMaIlSO.jFgQ1Riyvnmay86RQd9JajOVDu5et2;John;Brian;master@example.com;2001-09-28 00:00:00
-dev;$2a$10$xLtsbrwmihXUxuU/AQcW/eKv0Je/25XUAafVb8U3TmJ4L.mLezsXK;Rio;Cat;rio@example.com;2001-09-29 00:00:01

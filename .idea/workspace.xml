@@ -3,20 +3,97 @@
   <component name="ChangeListManager">
     <list default="true" id="5e5fa797-228e-4f7e-aef2-2151d94d922e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/esempla/blog/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esempla/blog/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/esempla/blog/controller/AppUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esempla/blog/controller/AppUserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/esempla/blog/controller/BlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esempla/blog/controller/BlogController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/esempla/blog/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esempla/blog/controller/CategoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/esempla/blog/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esempla/blog/controller/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/esempla/blog/controller/LoginCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esempla/blog/controller/LoginCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/esempla/blog/domain/AppUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esempla/blog/domain/AppUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/esempla/blog/domain/Blog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esempla/blog/domain/Blog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/esempla/blog/domain/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esempla/blog/domain/Post.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/esempla/blog/repository/CommentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esempla/blog/repository/CommentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/esempla/blog/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esempla/blog/service/CategoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/esempla/blog/utils/InitializerUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application-dev.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application-prod.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/esempla/blog/BlogApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/esempla/blog/config/BlogConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/esempla/blog/config/SecurityConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/esempla/blog/config/WebConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/esempla/blog/controller/AppUserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/esempla/blog/controller/BlogController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/esempla/blog/controller/CategoryController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/esempla/blog/controller/CommentController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/esempla/blog/controller/HomeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/esempla/blog/controller/LoginCard.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/esempla/blog/domain/AppUser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/esempla/blog/domain/Blog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/esempla/blog/domain/Category$CategoryBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/esempla/blog/domain/Category.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/esempla/blog/domain/Comments.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/esempla/blog/domain/Post.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/esempla/blog/domain/Roles.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/esempla/blog/domain/RolesType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/esempla/blog/repository/AppUserRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/esempla/blog/repository/BlogRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/esempla/blog/repository/CategoryRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/esempla/blog/repository/CommentRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/esempla/blog/repository/PostRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/esempla/blog/repository/UserRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/esempla/blog/service/CategoryService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/esempla/blog/utils/InitializerUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db/changelog/0000000000_initialDatabase.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db/changelog/201914081519_insert_data.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db/changelog/201929081613_insert_rest_data.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db/changelog/csv/blogs.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db/changelog/csv/category.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db/changelog/csv/comments.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db/changelog/csv/posts.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db/changelog/csv/roles.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db/changelog/csv/user_roles.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db/changelog/csv/users.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db/changelog/master.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/logback-spring.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/public/bootstrap/css/bootstrap-grid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/public/bootstrap/css/bootstrap-grid.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/public/bootstrap/css/bootstrap-reboot.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/public/bootstrap/css/bootstrap-reboot.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/public/bootstrap/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/public/bootstrap/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/public/bootstrap/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/public/bootstrap/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/public/bootstrap/js/bootstrap.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/public/bootstrap/js/bootstrap.bundle.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/public/bootstrap/js/bootstrap.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/public/bootstrap/js/bootstrap.bundle.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/public/bootstrap/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/public/bootstrap/js/bootstrap.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/public/bootstrap/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/public/bootstrap/js/bootstrap.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/public/css/boot.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/public/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/public/css/bootstrap_flatly.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/public/css/loginPage.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/public/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/public/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/public/jquery-easing/jquery.easing.compatibility.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/public/jquery-easing/jquery.easing.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/public/jquery-easing/jquery.easing.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/public/jquery/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/public/jquery/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/public/jquery/jquery.min.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/public/jquery/jquery.slim.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/public/jquery/jquery.slim.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/public/jquery/jquery.slim.min.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/public/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/public/js/customJs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/public/js/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/public/js/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/blogForm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/blogPage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/editPost.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/blogCard.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/footer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/header.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/homePage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/loginPage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/logoutPage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/registerPage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/showPostsByCategory.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -110,8 +187,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+            <state relative-caret-position="270">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
@@ -229,7 +306,6 @@
         <option value="$PROJECT_DIR$/src/Dockerfile" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/jib/entrypoint.sh" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/java/com/esempla/blog/config/SecurityConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/esempla/blog/controller/AppUserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/esempla/blog/controller/BlogController.java" />
@@ -242,6 +318,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/esempla/blog/repository/CommentRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/esempla/blog/service/CategoryService.java" />
         <option value="$PROJECT_DIR$/docker-compose.yml" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -462,7 +539,7 @@
       <workItem from="1568206632089" duration="11259000" />
       <workItem from="1568722121153" duration="8291000" />
       <workItem from="1568895955177" duration="6856000" />
-      <workItem from="1568975124253" duration="3717000" />
+      <workItem from="1568975124253" duration="3958000" />
     </task>
     <task id="LOCAL-00001" summary="solved problems with spring security">
       <created>1567447004801</created>
@@ -590,15 +667,28 @@
       <option name="project" value="LOCAL" />
       <updated>1568979303153</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="fix">
+      <created>1568980930042</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1568980930042</updated>
+    </task>
+    <task id="LOCAL-00020" summary="fixxing">
+      <created>1568981008191</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1568981008191</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93712000" />
+    <option name="totallyTimeSpent" value="93953000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23852721" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -660,7 +750,9 @@
     <MESSAGE value="now admin user can add categories" />
     <MESSAGE value="fix some bugs" />
     <MESSAGE value="config gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="config gitignore" />
+    <MESSAGE value="fix" />
+    <MESSAGE value="fixxing" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixxing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1103,8 +1195,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+        <state relative-caret-position="270">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>

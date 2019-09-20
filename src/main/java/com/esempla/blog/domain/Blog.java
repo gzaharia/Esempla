@@ -26,9 +26,6 @@ public class Blog {
     @JoinColumn(name = "user_id",referencedColumnName = "id")
     private AppUser appUser;
 
-//    @Column(name = "user_id")
-//    private Integer user_id;
-
     @Column(name = "created")
     private LocalDate created_date;
 

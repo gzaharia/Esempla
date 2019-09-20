@@ -39,18 +39,4 @@ public class Post {
 
     @OneToMany(mappedBy = "post", cascade = CascadeType.ALL)
     List<Comments> comments;
-
-//    @ManyToOne
-//    @JoinColumn(name = "blog_id",nullable = false)
-//    private Blog blogId;
-
-//    @ManyToOne
-//    @JoinColumn(name = "category_id",nullable = false)
-//    private Category categoryId;
-
-//    @OneToMany(cascade = CascadeType.ALL)
-//    Set<Comments> comments;
-
-
-
 }

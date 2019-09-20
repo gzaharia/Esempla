@@ -44,7 +44,6 @@ public class HomeController {
         }
         model.addAttribute("blogs",postRepository.findAll());
         model.addAttribute("newComment", new Comments());
-        //model.addAttribute("authenticatedUserUsername", principal != null ? principal.getName() : "Guest");
 
         return "index";
     }

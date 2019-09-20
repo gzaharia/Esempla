@@ -51,7 +51,6 @@ public class AppUserController {
         }
         model.addAttribute("newComment", new Comments());
         model.addAttribute("blogs", postRepository.findAllByBlogAppUserUsername(principal.getName()));
-        //model.addAttribute("authenticatedUserUsername",principal.getName());
         return "homePage";
     }
 

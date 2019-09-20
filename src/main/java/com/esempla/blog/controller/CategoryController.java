@@ -2,7 +2,6 @@ package com.esempla.blog.controller;
 
 
 import com.esempla.blog.domain.Category;
-import com.esempla.blog.domain.Post;
 import com.esempla.blog.repository.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -15,7 +14,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.security.Principal;
-import java.util.Date;
 import java.util.List;
 
 @Controller

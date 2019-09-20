@@ -15,9 +15,6 @@ import java.util.Set;
 @NoArgsConstructor
 @AllArgsConstructor
 public class AppUser {
-  /*  @OneToMany(cascade = CascadeType.ALL,
-            orphanRemoval = true)
-    Set<Blog> blogs = new HashSet<>();*/
     @ManyToMany
     @JoinTable(
             name = "user_roles",

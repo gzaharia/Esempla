@@ -112,11 +112,4 @@ public class LoginCard {
                 ((UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getUsername() : "Guest";
 
     }
-
-
-
-
-//    public String getLoginPage(){
-//        return "loginCard";
-//    }
 }

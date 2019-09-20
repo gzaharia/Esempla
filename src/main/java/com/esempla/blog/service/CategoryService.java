@@ -15,11 +15,6 @@ public class CategoryService {
 
     private final CategoryRepository repository;
 
-    public Collection<Category> listCategories() {
-        log.debug("Request to get all categories");
-        return repository.findAll();
-    }
-
     public void save(Category category) {
         log.debug("Request to save category '{}'", repository.save(category));
     }

@@ -21,14 +21,14 @@ import java.util.Iterator;
 import java.util.List;
 
 @Controller
-@RequestMapping("/appUser")
+@RequestMapping("/app-user")
 @RequiredArgsConstructor
 public class AppUserController {
 
     private final PostRepository postRepository;
     private final CategoryRepository categoryRepository;
 
-    @GetMapping("/homePage")
+    @GetMapping("/home-page")
     public String getHomePage(Model model, Principal principal) {
         if (principal != null) {
             Iterator i = ((UsernamePasswordAuthenticationToken) principal).getAuthorities().iterator();

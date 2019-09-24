@@ -39,7 +39,7 @@
 
 
 
-                <form method="post" th:action="@{/registerNewUser}" th:object="${newUser}" class="login-form">
+                <form method="post" th:action="@{/register-new-user}" th:object="${newUser}" class="login-form">
                     <input type="hidden" th:field="*{id}"/>
 
                     <div class="form-group">
@@ -73,7 +73,7 @@
             </div>
             <div class="card-footer">
                 <div class="d-flex justify-content-center links">
-                    <a th:href="@{/loginPage}"    class="forgot-password">Sign in</a>
+                    <a th:href="@{/login-page}"    class="forgot-password">Sign in</a>
                 </div>
 
             </div>

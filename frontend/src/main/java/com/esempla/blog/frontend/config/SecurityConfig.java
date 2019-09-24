@@ -36,20 +36,20 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
         http
                 .authorizeRequests()
-                .antMatchers("/appUser/**").hasAnyRole("USER","ADMIN")
+                .antMatchers("/app-user/**").hasAnyRole("USER","ADMIN")
                 .antMatchers("/comment/**").hasAnyRole("USER","ADMIN")
                 .antMatchers("/category/**").hasAnyRole("USER","ADMIN")
                 .antMatchers("/blog/**").hasAnyRole("USER","ADMIN")
                 .antMatchers("/**")
                 .permitAll()
                 .and().formLogin()
-                .loginPage("/loginPage")
-                .loginProcessingUrl("/loginPage")
-                .defaultSuccessUrl("/index")
+                .loginPage("/login-page")
+                .loginProcessingUrl("/login-page")
+                .defaultSuccessUrl("/")
                 .permitAll()
                 .and().logout()
-                .logoutUrl("/logoutPage")
-                .logoutSuccessUrl("/loginPage?logout")
+                .logoutUrl("/logout-page")
+                .logoutSuccessUrl("/login-page?logout")
                 .permitAll()
                 .and().httpBasic();
     }

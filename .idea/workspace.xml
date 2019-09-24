@@ -2,284 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc460a2e-591b-4cc1-bde4-f43798d94b03" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/esempla/blog/app/RunApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/src/main/java/com/esempla/blog/data/DataApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/main/java/com/esempla/blog/frontend/FrontendApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/esempla/blog/api/ApiApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/esempla/blog/api/restcontroller/BlogRestController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_4_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_9_7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_9_7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_9_7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_h2database_h2_1_4_197.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_3_2_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_javax_activation_api_1_2_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_3_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_persistence_javax_persistence_api_2_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_transaction_javax_transaction_api_1_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_2_0_1_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_9_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_11_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_11_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_12.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_9_0_12.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_12.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_attoparser_attoparser_2_0_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_dom4j_dom4j_2_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_0_4_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_3_7_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_0_13_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_23_1_GA.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_0_5_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_2_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_liquibase_liquibase_core_3_6_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_postgresql_postgresql_42_2_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_25.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_1_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_1_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_1_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_2_1_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_2_1_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_1_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_1_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_1_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_1_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_thymeleaf_2_1_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_1_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_1_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_1_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_2_1_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_1_1_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_1_1_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_test_5_1_1_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_1_1_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_1_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_5_1_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_1_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_1_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_1_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_1_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_1_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_1_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_5_1_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_1_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_1_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_1_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_1_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_extras_thymeleaf_extras_java8time_3_0_1_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_3_0_11_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_spring5_3_0_11_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_unbescape_unbescape_1_1_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_23.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/2/029ce56c9aebef26616ac709d0c8a03f53feb21a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/2/02f1f002127cf04fc34b393aad47265baa2d0348" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/3/03fbc1956377ee29469c9968808b07507f3ee554" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/4/04ab5af36f143cf7bb55741f87166cb5228fd0b6" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/9/09883a0c8d7785344900e410e461fa76f5fe0bc2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/a/0a5b920715a1ea1b5e3f58f1369be9fd580ba577" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/0/106889247b3ec9892760642025fa6fd29931fc22" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/2/12ac077d0cfb8e6c5be409ac8d571364de6e0e23" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/6/1644a860ac180b730eb8b9eca0452031159f21eb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/a/1a3433edd50d0c5854b64841fcb5b6b8cb4b5a11" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/f/1f1763f358c257ea3515417352b82b0165647ad1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/f/1f9005a747a2ad9939c599175b55d3420fc1c629" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/0/2040dd9388207c8acaf4775abdd27c04f9226991" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/2/22744a22cf20b491bbba01628c62e5649f7371d9" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/2/22a299f3eac7a2867cc8e1dd83ec7f1b56201fea" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/3/23c37a064a4bf478c44f917b3a6d16ede2f21742" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/6/262b109ab6dc73d88281dccf0081090faac8ef04" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/7/2720af1568499a937c22f7f12104fbf8987b7390" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/d/2d8709417f276d80c5e8ae66d47bcb2a0f1f9fc8" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/3/330b8d22cfc959a879e9a4ea3eaef0a12f17cbb9" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/3/33c8c608d5b8b11594c0f63f48beec7823a4b9ef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/4/34835bb8801b7356e025feee992811f31f4ae678" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/5/3559d519e934f49ff2d134ce373a9506786ac113" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/6/36e05acd4fcce8f4d4e684d17dac29ed27f79ff0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/c/3c2db18bcfd61a173ef1ed79043fd98fd96156fb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/1/41af64379c903b9f202c5a8f55ce4f08bd17fe51" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/1/41f7ce9939b10339cde6982fe8d3f085cbf039c7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/2/42958412836b8adeb24991bf9e6a7ecfc347b7a5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/a/4af2ebf079bfce9546893bb44c07a656235ac135" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/2/52faa9f4f4681e434c56ae24e1a086df0dce941d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/8/58ee41ce0fa55b62be6ea6ffef87c3a091b3e0df" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/b/5b2e0cd4fab0ff0f85f15ec0e834379fb8f949de" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/c/5ce980ebb299f7fdc43800842a3373ec56c5ea4f" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/d/5d837c4ed85ecaaf932c506e80ff5d7b9f3d590d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/e/5e1008549828149ba4f7bf664dc390377c723816" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/2/62bcb80c8fb0dfd2381125ea57cae8f6b3d9945a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/3/634202c0a5373e1ae059f601fbefeb1b587f5b9c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/5/652e7f9e6f2b442d36305f24c83bd078afce541a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/7/67f2e85ff829a15c699af0fe543af47e2d6c3af2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/f/6f20aba668eabdd521df0976b720fbabdf223b62" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/f/6f44c374ed43f25c6d224586c36b9f93e7b7ff3d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/1/713b7b0c1e190db51d394a4dd929b8c9e071c653" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/7/77c6e397973dd2d349d5db8763fabffcaf5eca72" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/c/7c3fc6050479dc8ff3cbff956129407880cd7dd0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/f/7fbc5f0d0459913a5457acf644076c1fa6a0b7ce" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/a/8a9f3a9053662534f41a5cef66e0a669743a2484" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/b/8b6c0f90dd18416ddf0b2c751789921372837abc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/e/8e3b3a844b0e8ccedd229dd1eb075aeb73e6a258" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/e/8eade1546343790c55af56fc3091abe637d97305" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/1/91dc309b9c942114d2165105cb669685a4738cc0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/2/92c7496378cc3b44ce54acef52184f5b08a0c19b" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/2/92f1de19e53274e924a0b22427e0635568045c6e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/4/94a4787a1b81863f10ca3dceb902c29a21ddd3cb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/5/9548325f8730d9681290cff0144362f184aebbf2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/6/9612bf54f885c2ec41cfb058cba37882fcb62733" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/f/9fe84ebb15faf917b7def6236dba604453cc61e0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/0/a0f60a9f7683b1ce69a1e6b13aa4e729d317a936" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/3/a3f2ae72fdb755e075908d7cc0baaa88a7533c21" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/6/a6d8b8556fee0e03112ce2bf34b8cb27a7dc9e58" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/9/a936b8fbc528a5c71519873f4c78a44b71ab4a5b" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/1/b13757fdf9555511c6c554a914bb2c1ee70af13e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/1/b14e422c526862ced0252cc462540868a83f157b" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/5/b57cac7bdec1ec13f0cb3fbfa2e9b086a8113d38" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/6/b66ef9d2aeabc27642a538770e0adaeda69e42a2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/8/b84af74c08ae9c561bea82797c9b05cc5fb2d70a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/8/b87816b62d61767ec90d4e3838de779ad2e54b11" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/9/b95688a2a96d83bd0d8c298ac202a1058d6b357c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/c/bca3de46387444356661ba053767bff645784d2a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/e/be0100a16aac939220d6a94405d522efcfc211a7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/e/beaefc3e5d657a46a6eee26633056036c8dba68a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/2/c27d7058125ae569ad495ae106a7414300f22a97" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/5/c5a86d7040a5f807a9a04b2d487b66b0641785aa" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/0/d02c6b6a8998bb18204b1b651e5ba2a45825b715" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/0/d08f6b1163757a34984d11a9ff1c9f865d4bbd19" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/1/d1e9650f9341733e1fec113b06cb1f54b8892c6b" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/5/d58a2bf82a49de16290847ba2f84aa1881ce54d7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/b/db85ccc8d24a12d1170dfc0d4565e5bd56903242" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/c/dc0b94cd85338eef98f46f7ca188e52cd73f570e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/4/e4a9dd4e419ac675110c43acf88877faea765e1f" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/6/e639c26d08947d6df74d6d8ca98a796cafd0830f" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/8/e86b4197c2ece45ef30036e88d0c85794edd82c7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/9/e9be4900d783b8a95c095ade1dad1bb8f7ab15ed" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/c/eca11ce3f4d4df536fbe01335b199d25e28f5fac" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/f/efc5ea5d83ea8102ab63238253d159078c58faa4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/7/f7a29aae0b63c9d108d96366277821c105116ccb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/b/fb37e6981a90a7e73fd82569d3c32b0e192a9be8" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/f/ff5ff3ce87f0896a531c718dc3ada9fe827425f2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/resources/application-prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/application-prod.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/com/esempla/blog/frontend/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/com/esempla/blog/frontend/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/com/esempla/blog/frontend/controller/AppUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/com/esempla/blog/frontend/controller/AppUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/com/esempla/blog/frontend/controller/BlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/com/esempla/blog/frontend/controller/BlogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/com/esempla/blog/frontend/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/com/esempla/blog/frontend/controller/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/com/esempla/blog/frontend/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/com/esempla/blog/frontend/controller/CommentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/com/esempla/blog/frontend/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/com/esempla/blog/frontend/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/com/esempla/blog/frontend/controller/LoginCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/com/esempla/blog/frontend/controller/LoginCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/resources/static/public/bootstrap/js/bootstrap.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/static/public/bootstrap/js/bootstrap.bundle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/resources/static/public/bootstrap/js/bootstrap.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/static/public/bootstrap/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/resources/static/public/bootstrap/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/static/public/bootstrap/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/resources/static/public/bootstrap/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/static/public/bootstrap/js/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/resources/static/public/jquery/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/static/public/jquery/jquery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/resources/static/public/jquery/jquery.slim.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/static/public/jquery/jquery.slim.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/resources/static/public/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/static/public/js/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/resources/templates/blogPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/templates/blogPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/resources/templates/editPost.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/templates/editPost.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/resources/templates/fragments/blogCard.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/templates/fragments/blogCard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/resources/templates/fragments/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/templates/fragments/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/resources/templates/loginPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/templates/loginPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/resources/templates/logoutPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/templates/logoutPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/resources/templates/registerPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/templates/registerPage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/esempla/blog/BlogApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/esempla/blog/config/BlogConfiguration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/esempla/blog/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/com/esempla/blog/frontend/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/esempla/blog/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/com/esempla/blog/frontend/config/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/esempla/blog/controller/AppUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/com/esempla/blog/frontend/controller/AppUserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/esempla/blog/controller/BlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/com/esempla/blog/frontend/controller/BlogController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/esempla/blog/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/com/esempla/blog/frontend/controller/CategoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/esempla/blog/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/com/esempla/blog/frontend/controller/CommentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/esempla/blog/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/com/esempla/blog/frontend/controller/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/esempla/blog/controller/LoginCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/com/esempla/blog/frontend/controller/LoginCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/esempla/blog/domain/AppUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/com/esempla/blog/data/domain/AppUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/esempla/blog/domain/Blog.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/com/esempla/blog/data/domain/Blog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/esempla/blog/domain/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/com/esempla/blog/data/domain/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/esempla/blog/domain/Comments.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/com/esempla/blog/data/domain/Comments.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/esempla/blog/domain/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/com/esempla/blog/data/domain/Post.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/esempla/blog/domain/Roles.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/com/esempla/blog/data/domain/Roles.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/esempla/blog/domain/RolesType.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/com/esempla/blog/data/domain/RolesType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/esempla/blog/repository/AppUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/com/esempla/blog/data/repository/AppUserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/esempla/blog/repository/BlogRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/com/esempla/blog/data/repository/BlogRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/esempla/blog/repository/CategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/com/esempla/blog/data/repository/CategoryRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/esempla/blog/repository/CommentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/com/esempla/blog/data/repository/CommentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/esempla/blog/repository/PostRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/com/esempla/blog/data/repository/PostRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/esempla/blog/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/com/esempla/blog/data/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/esempla/blog/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/com/esempla/blog/data/service/CategoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/jib/entrypoint.sh" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/jib/entrypoint.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/application-prod.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/0000000000_initialDatabase.xml" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/resources/db/changelog/0000000000_initialDatabase.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/201914081519_insert_data.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/resources/db/changelog/201914081519_insert_data.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/201929081613_insert_rest_data.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/resources/db/changelog/201929081613_insert_rest_data.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/csv/blogs.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/resources/db/changelog/csv/blogs.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/csv/category.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/resources/db/changelog/csv/category.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/csv/comments.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/resources/db/changelog/csv/comments.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/csv/posts.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/resources/db/changelog/csv/posts.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/csv/roles.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/resources/db/changelog/csv/roles.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/csv/user_roles.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/resources/db/changelog/csv/user_roles.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/csv/users.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/resources/db/changelog/csv/users.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/master.xml" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/resources/db/changelog/master.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/logback-spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/logback-spring.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/public/bootstrap/css/bootstrap-grid.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/static/public/bootstrap/css/bootstrap-grid.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/public/bootstrap/css/bootstrap-grid.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/static/public/bootstrap/css/bootstrap-grid.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/public/bootstrap/css/bootstrap-reboot.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/static/public/bootstrap/css/bootstrap-reboot.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/public/bootstrap/css/bootstrap-reboot.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/static/public/bootstrap/css/bootstrap-reboot.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/public/bootstrap/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/static/public/bootstrap/css/bootstrap.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/public/bootstrap/css/bootstrap.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/static/public/bootstrap/css/bootstrap.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/public/bootstrap/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/static/public/bootstrap/css/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/public/bootstrap/css/bootstrap.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/static/public/bootstrap/css/bootstrap.min.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/public/bootstrap/js/bootstrap.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/static/public/bootstrap/js/bootstrap.bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/public/bootstrap/js/bootstrap.bundle.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/static/public/bootstrap/js/bootstrap.bundle.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/public/bootstrap/js/bootstrap.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/static/public/bootstrap/js/bootstrap.bundle.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/public/bootstrap/js/bootstrap.bundle.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/static/public/bootstrap/js/bootstrap.bundle.min.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/public/bootstrap/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/static/public/bootstrap/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/public/bootstrap/js/bootstrap.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/static/public/bootstrap/js/bootstrap.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/public/bootstrap/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/static/public/bootstrap/js/bootstrap.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/public/bootstrap/js/bootstrap.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/static/public/bootstrap/js/bootstrap.min.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/public/css/boot.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/static/public/css/boot.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/public/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/static/public/css/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/public/css/bootstrap_flatly.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/static/public/css/bootstrap_flatly.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/public/css/loginPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/static/public/css/loginPage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/static/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/public/images/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/static/public/images/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/public/jquery-easing/jquery.easing.compatibility.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/static/public/jquery-easing/jquery.easing.compatibility.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/public/jquery-easing/jquery.easing.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/static/public/jquery-easing/jquery.easing.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/public/jquery-easing/jquery.easing.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/static/public/jquery-easing/jquery.easing.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/public/jquery/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/static/public/jquery/jquery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/public/jquery/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/static/public/jquery/jquery.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/public/jquery/jquery.min.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/static/public/jquery/jquery.min.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/public/jquery/jquery.slim.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/static/public/jquery/jquery.slim.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/public/jquery/jquery.slim.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/static/public/jquery/jquery.slim.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/public/jquery/jquery.slim.min.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/static/public/jquery/jquery.slim.min.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/public/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/static/public/js/bootstrap.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/public/js/customJs.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/static/public/js/customJs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/public/js/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/static/public/js/jquery.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/public/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/static/public/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/blogForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/templates/blogForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/blogPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/templates/blogPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/categoryForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/templates/categoryForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editPost.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/templates/editPost.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/blogCard.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/templates/fragments/blogCard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/templates/fragments/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/templates/fragments/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/homePage.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/templates/homePage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/loginPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/templates/loginPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/logoutPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/templates/logoutPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registerPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/templates/registerPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/showPostsByCategory.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/templates/showPostsByCategory.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/data/target/" />
     <ignored path="$PROJECT_DIR$/frontend/target/" />
     <ignored path="$PROJECT_DIR$/app/target/" />
+    <ignored path="$PROJECT_DIR$/api/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -297,19 +58,209 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="blog@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="blog@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="blog@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="blog: database" type="6d9b600a:PostgresImplModel$Database" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="blog@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="blog: database" type="6d9b600a:PostgresImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="blog@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="blog: database" type="6d9b600a:PostgresImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="blog@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="blog: database" type="6d9b600a:PostgresImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-1148566958">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.19" value="1" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="blog" value="1" />
+          <entry key="html" value="7" />
+          <entry key="java" value="34" />
+          <entry key="js" value="1" />
+          <entry key="map" value="1" />
+          <entry key="post" value="2" />
+          <entry key="sql" value="3" />
+          <entry key="xml" value="8" />
+          <entry key="yml" value="10" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Database Element" value="3" />
+          <entry key="HTML" value="7" />
+          <entry key="JAVA" value="34" />
+          <entry key="JavaScript" value="1" />
+          <entry key="Scratch" value="3" />
+          <entry key="SourceMap" value="1" />
+          <entry key="XML" value="8" />
+          <entry key="YAML" value="10" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="html" value="80" />
+          <entry key="java" value="410" />
+          <entry key="txt" value="12" />
+          <entry key="xml" value="21" />
+          <entry key="yml" value="12" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="HTML" value="80" />
+          <entry key="JAVA" value="410" />
+          <entry key="PLAIN_TEXT" value="12" />
+          <entry key="XML" value="21" />
+          <entry key="YAML" value="12" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/jib/entrypoint.sh">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="5" column="162" lean-forward="true" selection-start-line="5" selection-start-column="162" selection-end-line="5" selection-end-column="162" />
+            <state relative-caret-position="263">
+              <caret line="56" column="24" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/main/java/com/esempla/blog/frontend/config/WebConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/main/java/com/esempla/blog/frontend/config/SecurityConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="167">
+              <caret line="41" column="33" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/main/java/com/esempla/blog/frontend/controller/CategoryController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-82">
+              <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/src/main/java/com/esempla/blog/api/restcontroller/BlogRestController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="24" column="15" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="15" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/main/java/com/esempla/blog/frontend/controller/HomeController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="53" column="47" selection-start-line="53" selection-start-column="47" selection-end-line="53" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/frontend/src/main/java/com/esempla/blog/frontend/controller/BlogController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-320">
+              <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="520">
+              <caret line="26" selection-start-line="26" selection-end-line="29" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="440">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/src/main/java/com/esempla/blog/api/ApiApp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#310#311#0" expanded="true" />
+                <element signature="e#367#368#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -326,9 +277,28 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>db.changelog</find>
+      <find>/index</find>
+      <find>blogForm</find>
+      <find>home-page</find>
+      <find>homePage</find>
+      <find>home</find>
+      <find>home-</find>
+      <find>app-user</find>
+      <find>updatePost</find>
+      <find>deletePost</find>
+      <find>blogPage</find>
+      <find>newComment</find>
+      <find>allCategories</find>
+      <find>loginPage</find>
+      <find>logoutPage</find>
+      <find>registerPage</find>
+      <find>registerNewUser</find>
+      <find>blog</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\user\Work\Esempla</dir>
+      <dir>C:\Users\Zaharia Gabriel\Desktop\Esempla_final\Esempla\frontend\src\main\resources</dir>
+      <dir>C:\Users\Zaharia Gabriel\Desktop\Esempla_final\Esempla</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -344,19 +314,37 @@
         <option value="$PROJECT_DIR$/data/src/main/java/com/esempla/blog/data/domain/Roles.java" />
         <option value="$PROJECT_DIR$/frontend/src/main/java/com/esempla/blog/frontend/config/WebConfig.java" />
         <option value="$PROJECT_DIR$/data/pom.xml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/frontend/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/frontend/src/main/java/com/esempla/blog/frontend/FrontendApp.java" />
-        <option value="$PROJECT_DIR$/frontend/src/main/java/com/esempla/blog/frontend/controller/AppUserController.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/esempla/blog/app/RunApp.java" />
-        <option value="$PROJECT_DIR$/app/src/main/resources/application-prod.yml" />
-        <option value="$PROJECT_DIR$/app/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/app/src/main/resources/logback-spring.xml" />
         <option value="$PROJECT_DIR$/frontend/pom.xml" />
-        <option value="$PROJECT_DIR$/app/pom.xml" />
         <option value="$PROJECT_DIR$/app/src/main/jib/entrypoint.sh" />
+        <option value="$PROJECT_DIR$/frontend/src/main/java/com/esempla/blog/frontend/controller/HomeController.java" />
+        <option value="$PROJECT_DIR$/frontend/src/main/resources/templates/fragments/header.html" />
+        <option value="$PROJECT_DIR$/frontend/src/main/java/com/esempla/blog/frontend/controller/CategoryController.java" />
+        <option value="$PROJECT_DIR$/frontend/src/main/java/com/esempla/blog/frontend/controller/AppUserController.java" />
+        <option value="$PROJECT_DIR$/frontend/src/main/java/com/esempla/blog/frontend/controller/BlogController.java" />
+        <option value="$PROJECT_DIR$/frontend/src/main/java/com/esempla/blog/frontend/controller/LoginCard.java" />
+        <option value="$PROJECT_DIR$/app/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/app/src/main/resources/application-prod.yml" />
+        <option value="$PROJECT_DIR$/app/pom.xml" />
+        <option value="$PROJECT_DIR$/api/src/main/java/restcontroller/BlogRestController.java" />
+        <option value="$PROJECT_DIR$/api/src/main/java/com/esempla/blog/api/BlogRestController.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/esempla/blog/api/RunApp.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/esempla/blog/app/RunApp.java" />
+        <option value="$PROJECT_DIR$/frontend/src/main/java/com/esempla/blog/frontend/rest/BlogRestController.java" />
+        <option value="$PROJECT_DIR$/api/pom.xml" />
+        <option value="$PROJECT_DIR$/api/src/main/java/com/esempla/blog/api/ApiApp.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/api/src/main/java/com/esempla/blog/api/restcontroller/BlogRestController.java" />
       </list>
     </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="YtfEKIHl" />
@@ -373,23 +361,12 @@
       <expand>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="app" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="blog" type="9519ce18:MavenProjectsStructure$ProjectNode" />
         </path>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="app" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="blog" type="9519ce18:MavenProjectsStructure$ProjectNode" />
           <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="app" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="app" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
-          <item name="jib" type="36feed69:MavenProjectsStructure$PluginNode" />
         </path>
       </expand>
       <select />
@@ -401,67 +378,105 @@
     <option name="width" value="1612" />
     <option name="height" value="865" />
   </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State />
+          <State>
+            <id>CodeSpring CoreSpring</id>
+          </State>
+          <State>
+            <id>Spring</id>
+          </State>
+          <State>
+            <id>Spring CoreSpring</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>SpringComponentScan</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Esempla" type="b2602c69:ProjectViewProjectNode" />
               <item name="Esempla" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Esempla" type="b2602c69:ProjectViewProjectNode" />
               <item name="Esempla" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Esempla" type="b2602c69:ProjectViewProjectNode" />
               <item name="Esempla" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Esempla" type="b2602c69:ProjectViewProjectNode" />
               <item name="Esempla" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Esempla" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Esempla" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Esempla" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="jib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Esempla" type="b2602c69:ProjectViewProjectNode" />
               <item name="Esempla" type="462c0819:PsiDirectoryNode" />
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Esempla" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Esempla" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Esempla" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Esempla" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Esempla" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Esempla" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Esempla" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Esempla" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Esempla" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Esempla" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -470,6 +485,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -477,23 +493,25 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend/src/main/resources" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1569356793901" />
+    <property name="database.console.LAST_STATE" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.gutterIcons" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\user\Work\Esempla\frontend\src\main\resources" />
-      <recent name="C:\Users\user\Work\Esempla\app\src\main\resources" />
-      <recent name="C:\Users\user\Work\Esempla\frontend\src\main\resources\static" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\user\Work\Esempla\app\src" />
       <recent name="C:\Users\user\Work\Esempla\app" />
       <recent name="C:\Users\user\Work\Esempla\app\src\main\resources" />
       <recent name="C:\Users\user\Work\Esempla\app\src\main" />
       <recent name="C:\Users\user\Work\Esempla\data\src\main\resources" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Work\Esempla\frontend\src\main\resources" />
+      <recent name="C:\Users\user\Work\Esempla\app\src\main\resources" />
+      <recent name="C:\Users\user\Work\Esempla\frontend\src\main\resources\static" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -509,6 +527,19 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.RunApp">
+    <configuration name="ApiApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="api" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.esempla.blog.api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.esempla.blog.api.ApiApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BlogApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="blog" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.esempla.blog.BlogApplication" />
@@ -537,6 +568,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Spring Boot.BlogApplication" />
+      <item itemvalue="Spring Boot.DataApp" />
+      <item itemvalue="Spring Boot.FrontendApp" />
+      <item itemvalue="Spring Boot.RunApp" />
+      <item itemvalue="Spring Boot.ApiApp" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.ApiApp" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -549,116 +592,91 @@
       <option name="presentableId" value="Default" />
       <updated>1569229829367</updated>
       <workItem from="1569229836268" duration="7180000" />
+      <workItem from="1569307986269" duration="123000" />
+      <workItem from="1569308146680" duration="18177000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7180000" />
+    <option name="totallyTimeSpent" value="25480000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Designer" />
-      <window_info id="Image Layers" />
-      <window_info id="UI Designer" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info id="Capture Tool" />
-      <window_info id="Web" side_tool="true" />
-      <window_info id="Learn" weight="0.32969153" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17537314" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" />
-      <window_info anchor="bottom" id="Spring" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Statistic" />
-      <window_info anchor="bottom" id="Java Enterprise" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.4602961" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Maven" weight="0.32969153" />
-      <window_info anchor="right" id="Cargo" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Database" weight="0.32969153" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Bean Validation" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="UI Designer" order="6" />
+      <window_info id="Learn" order="7" weight="0.32969153" />
+      <window_info id="Web" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Database Console" order="0" weight="0.329718" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.329718" />
+      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.23861171" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.3991323" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.329718" />
+      <window_info anchor="bottom" id="Spring" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
+      <window_info anchor="bottom" id="Statistic" order="13" />
+      <window_info anchor="bottom" id="Java Enterprise" order="14" />
+      <window_info anchor="bottom" id="Database Changes" order="15" />
+      <window_info anchor="bottom" id="Version Control" order="16" weight="0.329718" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.32969153" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Cargo" order="5" />
+      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.18603411" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+      <window_info anchor="right" id="Capture Analysis" order="10" />
+      <window_info anchor="right" id="Maven Projects" order="11" weight="0.32995737" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/src/main/resources/db/changelog/0000000000_initialDatabase.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="37" column="45" lean-forward="true" selection-start-line="37" selection-start-column="45" selection-end-line="37" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/src/main/resources/db/changelog/master.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="20" lean-forward="true" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/src/main/java/com/esempla/blog/data/DataApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="51" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#242#243#0" expanded="true" />
-            <element signature="e#274#275#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/main/resources/static/public/js/script.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/esempla/blog/config/BlogConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/src/main/java/com/esempla/blog/data/service/CategoryService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/src/main/java/com/esempla/blog/data/domain/Comments.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/src/main/java/com/esempla/blog/data/domain/Post.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -673,24 +691,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/main/java/com/esempla/blog/frontend/config/SecurityConfig.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/esempla/blog/BlogApplication.java" />
+    <entry file="file://$PROJECT_DIR$/data/src/main/java/com/esempla/blog/data/domain/Blog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
+        <state relative-caret-position="160">
           <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/main/java/com/esempla/blog/frontend/config/WebConfig.java">
+    <entry file="file://$PROJECT_DIR$/app/Dockerfile" />
+    <entry file="file://$PROJECT_DIR$/app/target/jib-image.id" />
+    <entry file="file://$PROJECT_DIR$/app/target/jib-image.digest" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/resources/logback-spring.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        <state relative-caret-position="382">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/esempla/blog/BlogApplication.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/jib/entrypoint.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        <state relative-caret-position="60">
+          <caret line="3" column="162" selection-start-line="3" selection-start-column="162" selection-end-line="3" selection-end-column="162" />
         </state>
       </provider>
     </entry>
@@ -701,19 +723,120 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/src/main/java/com/esempla/blog/data/domain/Blog.java">
+    <entry file="file://$PROJECT_DIR$/data/src/main/java/com/esempla/blog/data/repository/AppUserRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        <state relative-caret-position="80">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/data/src/main/java/com/esempla/blog/data/service/CategoryService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="43" column="26" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
+        <state relative-caret-position="140">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/main/resources/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-60" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/main/resources/templates/fragments/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-40">
+          <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/d84da819-744c-4bb1-9ede-5d9e3e34ea07/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/main/resources/static/public/bootstrap/js/bootstrap.bundle.min.js.map">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret column="366" selection-start-column="366" selection-end-column="366" />
+        </state>
+      </provider>
+      <provider editor-type-id="sourcemapFileViewerProvider" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/main/resources/static/public/jquery/jquery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="7475" column="69" selection-start-line="7475" selection-start-column="69" selection-end-line="7475" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/main/resources/templates/editPost.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="39" column="18" lean-forward="true" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/main/resources/templates/fragments/blogCard.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/main/resources/templates/blogForm.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="14" column="6" lean-forward="true" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/main/resources/templates/blogPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-167">
+          <caret line="36" column="44" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/main/java/com/esempla/blog/frontend/controller/CommentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-283">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/main/java/com/esempla/blog/frontend/controller/LoginCard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-823">
+          <caret line="57" column="22" selection-start-line="57" selection-start-column="22" selection-end-line="57" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" column="6" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/8e28540a-58b2-4f07-b1f7-d9b1a521569e/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/97ceaf2d-737a-4bbb-98c3-4b07342beecf/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/resources/application-prod.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/main/resources/templates/loginPage.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker-compose.yml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/data/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -722,57 +845,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="16" selection-end-column="19" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/resources/application-dev.yml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/main/java/com/esempla/blog/frontend/controller/BlogController.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="19" column="17" lean-forward="true" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/main/java/com/esempla/blog/frontend/controller/CategoryController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/main/java/com/esempla/blog/frontend/controller/CommentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/main/java/com/esempla/blog/frontend/controller/HomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="38" column="53" lean-forward="true" selection-start-line="38" selection-start-column="53" selection-end-line="38" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/main/java/com/esempla/blog/frontend/controller/LoginCard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="33" column="45" lean-forward="true" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
+        <state relative-caret-position="140">
+          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/main/java/com/esempla/blog/frontend/controller/AppUserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="619">
-          <caret line="56" column="5" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
+        <state relative-caret-position="520">
+          <caret line="44" selection-start-line="44" selection-end-line="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docker-compose.yml">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/data/src/main/java/com/esempla/blog/data/DataApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="51" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/main/java/com/esempla/blog/frontend/FrontendApp.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -784,70 +879,132 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/main/resources/application.yml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/esempla/blog/app/RunApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="50" lean-forward="true" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="50" />
+        <state relative-caret-position="180">
+          <caret line="9" selection-start-line="9" selection-end-line="11" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#342#343#0" expanded="true" />
+            <element signature="e#399#400#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://97ceaf2d-737a-4bbb-98c3-4b07342beecf/database/blog/schema/public/table/post">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="32" column="39" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/esempla/blog/api/ApiApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#310#311#0" expanded="true" />
+            <element signature="e#367#368#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/main/java/com/esempla/blog/frontend/rest/BlogRestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#384#385#0" expanded="true" />
+            <element signature="e#440#441#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/main/java/com/esempla/blog/frontend/config/WebConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/main/java/com/esempla/blog/frontend/config/SecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="41" column="33" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="520">
+          <caret line="26" selection-start-line="26" selection-end-line="29" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Dockerfile">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/target/jib-image.id">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/target/jib-image.digest">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/esempla/blog/app/RunApp.java">
+    <entry file="file://$PROJECT_DIR$/api/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="56" column="24" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://97ceaf2d-737a-4bbb-98c3-4b07342beecf/database/blog/schema/public/table/blog">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
-          <caret column="8" lean-forward="true" selection-start-column="8" selection-end-column="28" />
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/main/java/com/esempla/blog/frontend/controller/HomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="53" column="47" selection-start-line="53" selection-start-column="47" selection-end-line="53" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/esempla/blog/api/restcontroller/BlogRestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="24" column="15" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/resources/application-dev.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/resources/application-prod.yml">
+    <entry file="file://$PROJECT_DIR$/frontend/src/main/java/com/esempla/blog/frontend/controller/CategoryController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="13" lean-forward="true" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state relative-caret-position="-82">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/resources/logback-spring.xml">
+    <entry file="file://$PROJECT_DIR$/frontend/src/main/java/com/esempla/blog/frontend/controller/BlogController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="29" column="66" lean-forward="true" selection-start-line="29" selection-start-column="66" selection-end-line="29" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/jib/entrypoint.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="162" lean-forward="true" selection-start-line="5" selection-start-column="162" selection-end-line="5" selection-end-column="162" />
+        <state relative-caret-position="-320">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

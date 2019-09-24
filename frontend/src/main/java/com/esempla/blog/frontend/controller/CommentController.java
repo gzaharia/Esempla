@@ -45,7 +45,7 @@ public class CommentController {
         comment.setAppUser(appUserRepository.findByUsername(username));
         commentRepository.save(comment);
 
-        return "redirect:/appUser/homePage";
+        return "redirect:/app-user/home-page";
     }
 
     @ModelAttribute("allCategories")

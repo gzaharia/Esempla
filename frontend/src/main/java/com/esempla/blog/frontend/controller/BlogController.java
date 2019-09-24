@@ -47,7 +47,7 @@ public class BlogController {
         postRepository.save(post);
 
 
-        return "redirect:/index";
+        return "redirect:/";
     }
     @PostMapping("/update")
     public String update (@ModelAttribute Post post, Principal principal){
@@ -57,27 +57,27 @@ public class BlogController {
         postRepository.save(post);
 
 
-        return "redirect:/index";
+        return "redirect:/";
     }
 
 
 
-    @GetMapping("/updatePost")
+    @GetMapping("/update-post")
     public String updatePost (@RequestParam("id") Long id, Model model){
         model.addAttribute("post", postRepository.findById(id));
         model.addAttribute("categories",categoryRepository.findAll());
         return  "blogForm";
     }
 
-    @GetMapping("/deletePost")
+    @GetMapping("/delete-post")
     public String deletePost(@RequestParam("id") Long id){
         postRepository.deleteById(id);
 
-        return "redirect:/appUser/homePage";
+        return "redirect:/app-user/home-page";
     }
 
 
-    @GetMapping("/blogPage")
+    @GetMapping("/blog-page")
     public String getBlogById(@RequestParam("blogId") Long blogId, Model model){
 
         model.addAttribute("blog",postRepository.findById(blogId).get());

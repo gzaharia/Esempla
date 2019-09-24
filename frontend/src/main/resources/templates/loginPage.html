@@ -37,7 +37,7 @@
             </div>
             <div class="card-body">
 
-                <form method="POST" th:action="@{/loginPage}" class="login-form">
+                <form method="POST" th:action="@{/login-page}" class="login-form">
                     <div th:if="${error}" class="alert alert-danger">
                         <span th:text="${error.toString()}" ></span>
                     </div>
@@ -63,7 +63,7 @@
             </div>
             <div class="card-footer">
                 <div class="d-flex justify-content-center links">
-                    <a th:href="@{/registerPage}" class="forgot-password" style="color:white">Create new account</a>
+                    <a th:href="@{/register-page}" class="forgot-password" style="color:white">Create new account</a>
                 </div>
 
             </div>

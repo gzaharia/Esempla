@@ -217,7 +217,7 @@
     var VERSION = '4.1.3';
     var DATA_KEY = 'bs.alert';
     var EVENT_KEY = "." + DATA_KEY;
-    var DATA_API_KEY = '.data-api';
+    var DATA_API_KEY = '.data-app';
     var JQUERY_NO_CONFLICT = $$$1.fn[NAME];
     var Selector = {
       DISMISS: '[data-dismiss="alert"]'
@@ -392,7 +392,7 @@
     var VERSION = '4.1.3';
     var DATA_KEY = 'bs.button';
     var EVENT_KEY = "." + DATA_KEY;
-    var DATA_API_KEY = '.data-api';
+    var DATA_API_KEY = '.data-app';
     var JQUERY_NO_CONFLICT = $$$1.fn[NAME];
     var ClassName = {
       ACTIVE: 'active',
@@ -556,7 +556,7 @@
     var VERSION = '4.1.3';
     var DATA_KEY = 'bs.carousel';
     var EVENT_KEY = "." + DATA_KEY;
-    var DATA_API_KEY = '.data-api';
+    var DATA_API_KEY = '.data-app';
     var JQUERY_NO_CONFLICT = $$$1.fn[NAME];
     var ARROW_LEFT_KEYCODE = 37; // KeyboardEvent.which value for left arrow key
 
@@ -1060,7 +1060,7 @@
     var VERSION = '4.1.3';
     var DATA_KEY = 'bs.collapse';
     var EVENT_KEY = "." + DATA_KEY;
-    var DATA_API_KEY = '.data-api';
+    var DATA_API_KEY = '.data-app';
     var JQUERY_NO_CONFLICT = $$$1.fn[NAME];
     var Default = {
       toggle: true,
@@ -1428,7 +1428,7 @@
     var VERSION = '4.1.3';
     var DATA_KEY = 'bs.dropdown';
     var EVENT_KEY = "." + DATA_KEY;
-    var DATA_API_KEY = '.data-api';
+    var DATA_API_KEY = '.data-app';
     var JQUERY_NO_CONFLICT = $$$1.fn[NAME];
     var ESCAPE_KEYCODE = 27; // KeyboardEvent.which value for Escape (Esc) key
 
@@ -1916,7 +1916,7 @@
     var VERSION = '4.1.3';
     var DATA_KEY = 'bs.modal';
     var EVENT_KEY = "." + DATA_KEY;
-    var DATA_API_KEY = '.data-api';
+    var DATA_API_KEY = '.data-app';
     var JQUERY_NO_CONFLICT = $$$1.fn[NAME];
     var ESCAPE_KEYCODE = 27; // KeyboardEvent.which value for Escape (Esc) key
 
@@ -3354,7 +3354,7 @@
     var VERSION = '4.1.3';
     var DATA_KEY = 'bs.scrollspy';
     var EVENT_KEY = "." + DATA_KEY;
-    var DATA_API_KEY = '.data-api';
+    var DATA_API_KEY = '.data-app';
     var JQUERY_NO_CONFLICT = $$$1.fn[NAME];
     var Default = {
       offset: 10,
@@ -3670,7 +3670,7 @@
     var VERSION = '4.1.3';
     var DATA_KEY = 'bs.tab';
     var EVENT_KEY = "." + DATA_KEY;
-    var DATA_API_KEY = '.data-api';
+    var DATA_API_KEY = '.data-app';
     var JQUERY_NO_CONFLICT = $$$1.fn[NAME];
     var Event = {
       HIDE: "hide" + EVENT_KEY,

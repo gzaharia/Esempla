@@ -8,6 +8,7 @@
 		<module>data</module>
 		<module>frontend</module>
 		<module>app</module>
+		<module>api</module>
 	</modules>
 
 	<parent>
@@ -51,6 +52,11 @@
 			<dependency>
 				<groupId>com.esempla</groupId>
 				<artifactId>frontend</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.esempla</groupId>
+				<artifactId>api</artifactId>
 				<version>0.0.1-SNAPSHOT</version>
 			</dependency>
 			<dependency>

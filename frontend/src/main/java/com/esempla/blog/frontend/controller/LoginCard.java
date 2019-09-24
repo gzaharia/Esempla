@@ -38,7 +38,7 @@ public class LoginCard {
 
 
 
-    @GetMapping("/loginPage")
+    @GetMapping("/login-page")
     public ModelAndView loginPage(@RequestParam(value = "error", required = false) String error,
                                   @RequestParam(value = "logout", required = false) String logout, Principal principal) {
         ModelAndView model = new ModelAndView();
@@ -55,7 +55,7 @@ public class LoginCard {
     }
 
 
-    @GetMapping("/logoutPage")
+    @GetMapping("/logout-page")
     public ModelAndView logoutPage(Principal principal) {
         ModelAndView model = new ModelAndView();
 
@@ -65,7 +65,7 @@ public class LoginCard {
         return model;
     }
 
-    @GetMapping("/registerPage")
+    @GetMapping("/register-page")
     public String registerPage(Model model) {
 
 
@@ -76,7 +76,7 @@ public class LoginCard {
 
 
 
-    @PostMapping("/registerNewUser")
+    @PostMapping("/register-new-user")
     public String registerNewUser(@ModelAttribute AppUser newUser) {
 
 
@@ -104,7 +104,7 @@ public class LoginCard {
 
         blogRepository.save(blogNew);
 
-        return "redirect:/loginPage";
+        return "redirect:/login-page";
     }
 
 

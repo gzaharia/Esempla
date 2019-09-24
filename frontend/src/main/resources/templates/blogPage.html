@@ -33,8 +33,8 @@
 
                             <span th:if="${authenticatedUserUsername.equals(blog.getBlog().getAppUser().getUsername()) or
                     (authenticatedUserRole != null and authenticatedUserRole.equals('ROLE_ADMIN'))}">
-                        <a th:href="@{/blog/updatePost(id=${blog.getId()})}" class="btn btn-info" role="button">Edit</a>
-                        <a th:href="@{/blog/deletePost(id=${blog.getId()})}" class="btn btn-danger"
+                        <a th:href="@{/blog/update-post(id=${blog.getId()})}" class="btn btn-info" role="button">Edit</a>
+                        <a th:href="@{/blog/delete-post(id=${blog.getId()})}" class="btn btn-danger"
                            role="button">Delete</a>
                     </span>
                     </div>

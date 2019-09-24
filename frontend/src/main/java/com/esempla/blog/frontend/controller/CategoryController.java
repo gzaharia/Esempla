@@ -35,7 +35,7 @@ public class CategoryController {
 
         categoryRepository.save(category);
 
-        return "redirect:/index";
+        return "redirect:/";
     }
 
     @PostMapping("/update")
@@ -44,7 +44,7 @@ public class CategoryController {
 
         categoryRepository.save(category);
 
-        return "redirect:/index";
+        return "redirect:/";
     }
 
     @ModelAttribute("allCategories")

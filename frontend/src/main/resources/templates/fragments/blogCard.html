@@ -23,8 +23,8 @@
 
                 <span th:if="${authenticatedUserUsername.equals(blog.getBlog().getAppUser().getUsername()) or
                     (authenticatedUserRole != null and authenticatedUserRole.equals('ROLE_ADMIN'))}">
-                        <a th:href="@{/blog/updatePost(id=${blog.getId()})}" class="btn btn-info" role="button">Edit</a>
-                        <a th:href="@{/blog/deletePost(id=${blog.getId()})}" class="btn btn-danger"
+                        <a th:href="@{/blog/update-post(id=${blog.getId()})}" class="btn btn-info" role="button">Edit</a>
+                        <a th:href="@{/blog/delete-post(id=${blog.getId()})}" class="btn btn-danger"
                            role="button">Delete</a>
                     </span>
             </div>
@@ -39,7 +39,7 @@
 
                         <p th:text="${blog.getContent().substring(0,9) + '...'}">content</p>
 
-                <a th:href="@{/blog/blogPage(blogId=${blog.getId()})}" type="button" class="btn btn-lg btn-block btn-outline-primary">More</a>
+                <a th:href="@{/blog/blog-page(blogId=${blog.getId()})}" type="button" class="btn btn-lg btn-block btn-outline-primary">More</a>
 
                     </span>
 

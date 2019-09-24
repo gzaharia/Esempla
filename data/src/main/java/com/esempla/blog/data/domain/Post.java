@@ -35,6 +35,7 @@ public class Post {
     @ManyToOne
     private Blog blog;
 
+
     @OneToMany(mappedBy = "post", cascade = CascadeType.ALL)
     List<Comments> comments;
 }

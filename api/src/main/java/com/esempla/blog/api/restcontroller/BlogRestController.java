@@ -14,7 +14,7 @@ import java.awt.*;
 
 @RestController
 @RequestMapping("/api")
-@AllArgsConstructor
+@AllArgsConstructora
 public class BlogRestController {
     private final BlogRepository blogRepository;
 
@@ -22,8 +22,8 @@ public class BlogRestController {
 
     private final PostRepository postRepository;
 
-    @GetMapping("/post-by-{id}")
-    public ResponseEntity<Post> getPostById(@PathVariable Long id){
+    @GetMapping("/post-by-id")
+    public ResponseEntity<Post> getPostById(@RequestParam("id") Long id){
         return ResponseEntity.ok(postRepository.findById(id).get());
     }
 

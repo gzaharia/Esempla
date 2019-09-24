@@ -16,6 +16,10 @@
             <groupId>com.esempla</groupId>
             <artifactId>frontend</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.esempla</groupId>
+            <artifactId>api</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

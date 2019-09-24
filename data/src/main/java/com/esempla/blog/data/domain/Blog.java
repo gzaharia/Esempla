@@ -1,5 +1,6 @@
 package com.esempla.blog.data.domain;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -28,6 +29,7 @@ public class Blog {
     @Column(name = "created")
     private LocalDate created_date;
 
+    @JsonBackReference
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "blog")
     Set<Post> posts = new HashSet<>();
 

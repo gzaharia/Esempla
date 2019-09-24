@@ -1,5 +1,6 @@
 package com.esempla.blog.data.domain;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,7 +17,7 @@ public class Roles {
     @Enumerated(EnumType.STRING)
     private RolesType name;
 
-
+    @JsonManagedReference
     @ManyToMany(mappedBy = "usersRoles")
     Set<AppUser> users;
 

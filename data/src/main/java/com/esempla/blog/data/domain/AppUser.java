@@ -1,5 +1,6 @@
 package com.esempla.blog.data.domain;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,6 +16,8 @@ import java.util.Set;
 @NoArgsConstructor
 @AllArgsConstructor
 public class AppUser {
+
+    @JsonBackReference
     @ManyToMany
     @JoinTable(
             name = "user_roles",
@@ -22,6 +25,7 @@ public class AppUser {
             inverseJoinColumns = @JoinColumn(name = "role_name")
     )
     Set<Roles> usersRoles = new HashSet<>();
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -39,6 +43,7 @@ public class AppUser {
     @Column(name = "created")
     private Date created_date;
 
+    @JsonBackReference
     @OneToMany(mappedBy = "appUser")
     Set<Comments> comments;
 }

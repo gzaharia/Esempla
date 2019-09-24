@@ -1,5 +1,7 @@
 package com.esempla.blog.data.domain;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -32,10 +34,11 @@ public class Post {
     @ManyToOne
     private Category category;
 
+    @JsonManagedReference
     @ManyToOne
     private Blog blog;
 
-
+    @JsonBackReference
     @OneToMany(mappedBy = "post", cascade = CascadeType.ALL)
     List<Comments> comments;
 }

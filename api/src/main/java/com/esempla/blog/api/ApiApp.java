@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-//@ComponentScan(basePackages = {"com.esempla.blog.*"})
+@ComponentScan(basePackages = {"com.esempla.blog.*"})
 public class ApiApp {
     public static void main(String[] args) {
         SpringApplication.run(ApiApp.class, args);

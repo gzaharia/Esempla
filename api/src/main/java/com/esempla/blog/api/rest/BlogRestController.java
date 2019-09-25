@@ -1,19 +1,12 @@
-package com.esempla.blog.api.restcontroller;
+package com.esempla.blog.api.rest;
 
 import com.esempla.blog.data.domain.Post;
 import com.esempla.blog.data.repository.BlogRepository;
 import com.esempla.blog.data.repository.CategoryRepository;
 import com.esempla.blog.data.repository.PostRepository;
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.awt.*;
-import java.security.Principal;
-import java.util.Date;
 
 @RestController
 @RequestMapping("/api")
@@ -27,25 +20,24 @@ public class BlogRestController {
     private final PostRepository postRepository;
 
     @GetMapping("/post-by-id")
-    public ResponseEntity<Post> getPostById(@RequestParam("id") Long id){
-        return ResponseEntity.ok(postRepository.findById(id).get());
+    public ResponseEntity<Post> getPostById(@RequestParam("id") Long id) {
+
+        return ResponseEntity.ok(
+                postRepository.findById(id).orElseThrow(() -> new RuntimeException("bla bla bla"))
+        );
     }
 
     @PostMapping("/save")
-    public ResponseEntity<Post> save(@RequestBody Post post){
+    public ResponseEntity<Post> save(@RequestBody Post post) {
 
         return ResponseEntity.ok(postRepository.save(post));
     }
 
     @PostMapping("/update")
-    public ResponseEntity<Post> update(@RequestBody Post post){
+    public ResponseEntity<Post> update(@RequestBody Post post) {
 
         return ResponseEntity.ok(postRepository.save(post));
     }
-
-
-
-
 
 
 }

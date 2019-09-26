@@ -8,8 +8,8 @@
         <outputRelativeToContentRoot value="true" />
         <module name="api" />
         <module name="app" />
-        <module name="data" />
         <module name="frontend" />
+        <module name="data" />
       </profile>
     </annotationProcessing>
   </component>

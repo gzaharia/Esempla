@@ -37,7 +37,7 @@ public class BlogApiController {
 
 
     @PostMapping
-    public ResponseEntity<Post>  create(@Valid @RequestBody PostDto postDto) {
+    public ResponseEntity<PostDto>  create(@Valid @RequestBody PostDto postDto) {
 
         return ResponseEntity.ok(
                 postService.save(postDto).orElseThrow(() -> new RuntimeException("Create post Exception")));
@@ -45,7 +45,7 @@ public class BlogApiController {
     }
 
     @PutMapping
-    public ResponseEntity<Post>  update(@Valid @RequestBody PostDto postDto) {
+    public ResponseEntity<PostDto>  update(@Valid @RequestBody PostDto postDto) {
         log.debug("REST request to update POST : {}", postDto);
         return ResponseEntity.ok(
                 postService.save(postDto).orElseThrow(() -> new RuntimeException("Update post Exception")));

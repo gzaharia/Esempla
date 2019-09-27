@@ -1,19 +1,35 @@
-version: '1'
+version: '3'
 services:
-  db:
-  image: postgres
-  restart: always
-  environmnt:
-    - POSTGRES_DB=blog
-    - POSTGRES_USER=postgres
-    - POSTGRES_PASSWORD=password
-  ports:
-    - 5432:5432
-
-  blog-app:
-    image: gzaharia/blog
+  postgres-service:
+    image: postgres
+    restart: always
     environment:
-    - _JAVA_OPTIONS=-Xmx512m -Xms256m
-    - SPRING_PROFILES_ACTIVE=prod
-    - SPRING_DATASOURCE_USERNAME=
-    - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/library?useUnicode=true&allowPublicKeyRetrieval=true&useSSL=false
+      - POSTGRES_DB=blog
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - 5433:5432
+  blog-app:
+    image: gzaharia/blog-app
+    environment:
+      - _JAVA_OPTIONS=-Xmx512m -Xms256m
+      - SPRING_PROFILES_ACTIVE=prod
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=postgres
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-service:5432/blog
+      - APP_SLEEP=10
+    ports:
+      - 8080:8080
+  app-api:
+    image: gzaharia/app-api
+    environment:
+      - _JAVA_OPTIONS=-Xmx512m -Xms256m
+      - SPRING_PROFILES_ACTIVE=prod
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=postgres
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-service:5432/blog
+      - APP_SLEEP=20
+    ports:
+      - 8081:8081
+
+

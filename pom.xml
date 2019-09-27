@@ -9,7 +9,8 @@
 		<module>frontend</module>
 		<module>app</module>
 		<module>api</module>
-	</modules>
+        <module>app-api</module>
+    </modules>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
